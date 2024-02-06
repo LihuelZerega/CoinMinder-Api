@@ -3,10 +3,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const findMyCarRoutes = require('./routes/findmycarformRoutes');
-const saleFormRoutes = require('./routes/saleformRoutes');
-const authRoutes = require('./routes/authRoutes');
-const carRoutes = require('./routes/carRoutes')
+const applRoutes = require('./routes/Stocks/aaplRoute')
 const employmentFormRoutes = require('./routes/employmentformRoutes')
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
@@ -33,6 +30,7 @@ app.use(cookieParser());
 app.use(morgan('dev'));
 
 app.use(express.json());
+app.use('/api/appl/quote', applRoutes)
 app.use('/api/employmentform', employmentFormRoutes);
 
 app.use((err, req, res, next) => {

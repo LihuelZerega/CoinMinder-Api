@@ -1,8 +1,8 @@
-const { DataTypes } = require("sequelize");
-const { sequelize } = require("../db");
+const { DataTypes } = require('sequelize');
+const { sequelize } = require ('../db')
 
 module.exports = (sequelize) => {
-const Appl = sequelize.define("appl", {
+const AAPL = sequelize.define("aapl", {
     c: {
       type: DataTypes.FLOAT,
       allowNull: false
@@ -30,7 +30,7 @@ const Appl = sequelize.define("appl", {
     pc: {
       type: DataTypes.FLOAT,
       allowNull: false
-        }
-    });
-    return Appl;
-};
+    }
+  })
+return AAPL;
+}

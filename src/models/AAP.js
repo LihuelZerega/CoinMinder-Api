@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 const { sequelize } = require("../db");
 
 module.exports = (sequelize) => {
-const App = sequelize.define("app", {
+const Aap = sequelize.define("aap", {
     c: {
       type: DataTypes.FLOAT,
       allowNull: false
@@ -32,5 +32,5 @@ const App = sequelize.define("app", {
       allowNull: false
         }
     });
-    return App;
+    return Aap;
 };

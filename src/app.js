@@ -6,8 +6,35 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const cors = require('cors');
-const aapRoutes = require('./routes/Stocks/aapRoute')
-const aaplRoutes = require('./routes/Stocks/aaplRoute')
+
+const aapRoutes = require('./routes/Stocks/aapRoute');
+const aaplRoutes = require('./routes/Stocks/aaplRoute');
+const amdRoutes = require('./routes/Stocks/amdRoute');
+const amzRoutes = require('./routes/Stocks/amzRoute');
+const amznRoutes = require('./routes/Stocks/amznRoute');
+const baRoutes = require('./routes/Stocks/baRoute');
+const bacRoutes = require('./routes/Stocks/bacRoute');
+const cscoRoutes = require('./routes/Stocks/cscoRoute');
+const disRoutes = require('./routes/Stocks/disRoute');
+const fbRoutes = require('./routes/Stocks/fbRoute');
+const geRoutes = require('./routes/Stocks/geRoute');
+const googlRoutes = require('./routes/Stocks/googlRoute');
+const gsRoutes = require('./routes/Stocks/gsRoute');
+const ibmRoutes = require('./routes/Stocks/ibmRoute');
+const intcRoutes = require('./routes/Stocks/intcRoute');
+const jpmRoutes = require('./routes/Stocks/jpmRoute');
+const koRoutes = require('./routes/Stocks/koRoute');
+const mcdRoutes = require('./routes/Stocks/mcdRoute');
+const msRoutes = require('./routes/Stocks/msRoute');
+const msftRoutes = require('./routes/Stocks/msftRoute');
+const nflxRoutes = require('./routes/Stocks/nflxRoute');
+const nvdaRoutes = require('./routes/Stocks/nvdaRoute');
+const pepRoutes = require('./routes/Stocks/pepRoute');
+const pyplRoutes = require('./routes/Stocks/pyplRoute');
+const tRoutes = require('./routes/Stocks/tRoute');
+const tslaRoutes = require('./routes/Stocks/tslaRoute');
+const vzRoutes = require('./routes/Stocks/vzRoute');
+const wmtRoutes = require('./routes/Stocks/wmtRoute');
 
 const app = express();
 
@@ -30,8 +57,36 @@ app.use(cookieParser());
 app.use(morgan('dev'));
 
 app.use(express.json());
-app.use('/api/stock/aap', aapRoutes)
-app.use('/api/stock/aapl', aaplRoutes)
+
+// Rutas para los diferentes endpoints
+app.use('/api/stock/aap', aapRoutes);
+app.use('/api/stock/aapl', aaplRoutes);
+app.use('/api/stock/amd', amdRoutes);
+app.use('/api/stock/amz', amzRoutes);
+app.use('/api/stock/amzn', amznRoutes);
+app.use('/api/stock/ba', baRoutes);
+app.use('/api/stock/bac', bacRoutes);
+app.use('/api/stock/csco', cscoRoutes);
+app.use('/api/stock/dis', disRoutes);
+app.use('/api/stock/fb', fbRoutes);
+app.use('/api/stock/ge', geRoutes);
+app.use('/api/stock/googl', googlRoutes);
+app.use('/api/stock/gs', gsRoutes);
+app.use('/api/stock/ibm', ibmRoutes);
+app.use('/api/stock/intc', intcRoutes);
+app.use('/api/stock/jpm', jpmRoutes);
+app.use('/api/stock/ko', koRoutes);
+app.use('/api/stock/mcd', mcdRoutes);
+app.use('/api/stock/ms', msRoutes);
+app.use('/api/stock/msft', msftRoutes);
+app.use('/api/stock/nflx', nflxRoutes);
+app.use('/api/stock/nvda', nvdaRoutes);
+app.use('/api/stock/pep', pepRoutes);
+app.use('/api/stock/pypl', pyplRoutes);
+app.use('/api/stock/t', tRoutes);
+app.use('/api/stock/tsla', tslaRoutes);
+app.use('/api/stock/vz', vzRoutes);
+app.use('/api/stock/wmt', wmtRoutes);
 
 app.use((err, req, res, next) => {
   const status = err.status || 500;

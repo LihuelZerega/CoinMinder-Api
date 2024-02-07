@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const fbController = require('../../controllers/fbController');
+const fbController = require('../../controllers/StockControllers/fbController');
 
 router.get('/quote', fbController.getFB);
 

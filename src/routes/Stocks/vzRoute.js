@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const vzController = require('../../controllers/vzController');
+const vzController = require('../../controllers/StockControllers/vzController');
 
 router.get('/quote', vzController.getVZ);
 

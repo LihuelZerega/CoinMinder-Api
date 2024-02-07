@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const intcController = require('../../controllers/intcController');
+const intcController = require('../../controllers/StockControllers/intcController');
 
 router.get('/quote', intcController.getINTC);
 

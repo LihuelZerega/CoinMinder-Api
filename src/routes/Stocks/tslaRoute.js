@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const tslaController = require('../../controllers/tslaController');
+const tslaController = require('../../controllers/StockControllers/tslaController');
 
 router.get('/quote', tslaController.getTSLA);
 

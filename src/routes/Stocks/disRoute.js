@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const disController = require('../../controllers/disController');
+const disController = require('../../controllers/StockControllers/disController');
 
 router.get('/quote', disController.getDIS);
 

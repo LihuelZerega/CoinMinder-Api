@@ -58,7 +58,7 @@ app.use(morgan('dev'));
 
 app.use(express.json());
 
-// Rutas para los diferentes endpoints
+// Stocks endpoints
 app.use('/api/stock/aap', aapRoutes);
 app.use('/api/stock/aapl', aaplRoutes);
 app.use('/api/stock/amd', amdRoutes);

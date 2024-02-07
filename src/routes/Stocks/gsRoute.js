@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const gsController = require('../../controllers/gsController');
+const gsController = require('../../controllers/StockControllers/gsController');
 
 router.get('/quote', gsController.getGS);
 

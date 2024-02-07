@@ -21,34 +21,89 @@ sequelize
     console.error("Unable to connect to the database:", error);
   });
 
-const AapStockModel = require("./models/AAP");
-const AaplStockModel = require("./models/AAPL")
-const AmdStockModel = require("./models/AMD");
-const AmzStockModel = require("./models/AMZ");
-const AmznStockModel = require("./models/AMZN");
-const BaStockModel = require("./models/BA");
-const BacStockModel = require("./models/BAC");
-const CscoStockModel = require("./models/CSCO");
-const DisStockModel = require("./models/DIS");
-const FbStockModel = require("./models/FB");
-const GeStockModel = require("./models/GE");
-const GooglStockModel = require("./models/GOOGL");
-const GsStockModel = require("./models/GS");
-const IbmStockModel = require("./models/IBM");
-const IntcStockModel = require("./models/INTC");
-const JpmStockModel = require("./models/JPM");
-const KoStockModel = require("./models/KO");
-const McdStockModel = require("./models/MCD");
-const MsStockModel = require("./models/MS");
-const MsftStockModel = require("./models/MSFT");
-const NflxStockModel = require("./models/NFLX");
-const NvdaStockModel = require("./models/NVDA");
-const PepStockModel = require("./models/PEP");
-const PyplStockModel = require("./models/PYPL");
-const TStockModel = require("./models/T");
-const TslaStockModel = require("./models/TSLA");
-const VzStockModel = require("./models/VZ");
-const WmtStockModel = require("./models/WMT");
+
+//Cryptos
+const AvalancheCryptoModel = require("./models/CryptoCurrenciesModels/Avalanche");
+const BinanceBitcoinCryptoModel = require("./models/CryptoCurrenciesModels/BinanceBitcoin");
+const BitcoinCryptoModel = require("./models/CryptoCurrenciesModels/Bitcoin");
+const BitcoinCashCryptoModel = require("./models/CryptoCurrenciesModels/BitcoinCash");
+const CardanoCryptoModel = require("./models/CryptoCurrenciesModels/Cardano");
+const ChainLinkCryptoModel = require("./models/CryptoCurrenciesModels/ChainLink");
+const CosmosHubCryptoModel = require("./models/CryptoCurrenciesModels/CosmosHub");
+const DaiCryptoModel = require("./models/CryptoCurrenciesModels/Dai");
+const DogeCoinCryptoModel = require("./models/CryptoCurrenciesModels/DogeCoin");
+const EthereumCryptoModel = require("./models/CryptoCurrenciesModels/Ethereum");
+const InternetComputerCryptoModel = require("./models/CryptoCurrenciesModels/InternetComputer");
+const LeoTokenCryptoModel = require("./models/CryptoCurrenciesModels/LeoToken");
+const LidoStakedEtherCryptoModel = require("./models/CryptoCurrenciesModels/LidoStakedEther");
+const LiteCoinCryptoModel = require("./models/CryptoCurrenciesModels/LiteCoin");
+const PolkadotCryptoModel = require("./models/CryptoCurrenciesModels/Polkadot");
+const PolygonCryptoModel = require("./models/CryptoCurrenciesModels/Polygon");
+const RippleCryptoModel = require("./models/CryptoCurrenciesModels/Ripple");
+const ShibaInuCryptoModel = require("./models/CryptoCurrenciesModels/ShibaInu");
+const SolanaCryptoModel = require("./models/CryptoCurrenciesModels/Solana");
+const TetherCryptoModel = require("./models/CryptoCurrenciesModels/Tether");  
+const ToincoinCryptoModel = require("./models/CryptoCurrenciesModels/Toincoin");
+const TronCryptoModel = require("./models/CryptoCurrenciesModels/Tron");
+const UniSwapCryptoModel = require("./models/CryptoCurrenciesModels/UniSwap");
+const UsdcCryptoModel = require("./models/CryptoCurrenciesModels/Usdc");
+const WrappedBitcoinCryptoModel = require("./models/CryptoCurrenciesModels/WrappedBitcoin");
+
+const AVALANCHEcrypto = AvalancheCryptoModel(sequelize);
+const BINANCEBITCOINcrypto = BinanceBitcoinCryptoModel(sequelize);
+const BITCOINcrypto = BitcoinCryptoModel(sequelize);
+const BITCOINCASHcrypto = BitcoinCashCryptoModel(sequelize);
+const CARDANOcrypto = CardanoCryptoModel(sequelize);
+const CHAINLINKcrypto = ChainLinkCryptoModel(sequelize);
+const COSMOSHUBcrypto = CosmosHubCryptoModel(sequelize);
+const DAIcrypto = DaiCryptoModel(sequelize);
+const DOGECOINcrypto = DogeCoinCryptoModel(sequelize);
+const ETHEREUMcrypto = EthereumCryptoModel(sequelize);
+const INTERNETCOMPUTERcrypto = InternetComputerCryptoModel(sequelize);
+const LEOTOKENcrypto = LeoTokenCryptoModel(sequelize);
+const LIDOSTAKEDcrypto = LidoStakedEtherCryptoModel(sequelize);
+const LITECOINcrypto = LiteCoinCryptoModel(sequelize);
+const POLKADOTcrypto = PolkadotCryptoModel(sequelize);
+const POLYGONcrypto = PolygonCryptoModel(sequelize);
+const RIPPLEcrypto = RippleCryptoModel(sequelize);
+const SHIBAINUcrypto = ShibaInuCryptoModel(sequelize);
+const SOLANAcrypto = SolanaCryptoModel(sequelize);
+const TETHERcrypto = TetherCryptoModel(sequelize);
+const TOINCOINcrypto = ToincoinCryptoModel(sequelize);
+const TRONcrypto = TronCryptoModel(sequelize);
+const UNISWAPcrypto = UniSwapCryptoModel(sequelize);
+const USDCcrypto = UsdcCryptoModel(sequelize);
+const WRAPPEDBITCOINcrypto = WrappedBitcoinCryptoModel(sequelize);
+
+//Stocks
+const AapStockModel = require("./models/StocksModels/AAP");
+const AaplStockModel = require("./models/StocksModels/AAPL")
+const AmdStockModel = require("./models/StocksModels/AMD");
+const AmzStockModel = require("./models/StocksModels/AMZ");
+const AmznStockModel = require("./models/StocksModels/AMZN");
+const BaStockModel = require("./models/StocksModels/BA");
+const BacStockModel = require("./models/StocksModels/BAC");
+const CscoStockModel = require("./models/StocksModels/CSCO");
+const DisStockModel = require("./models/StocksModels/DIS");
+const FbStockModel = require("./models/StocksModels/FB");
+const GeStockModel = require("./models/StocksModels/GE");
+const GooglStockModel = require("./models/StocksModels/GOOGL");
+const GsStockModel = require("./models/StocksModels/GS");
+const IbmStockModel = require("./models/StocksModels/IBM");
+const IntcStockModel = require("./models/StocksModels/INTC");
+const JpmStockModel = require("./models/StocksModels/JPM");
+const KoStockModel = require("./models/StocksModels/KO");
+const McdStockModel = require("./models/StocksModels/MCD");
+const MsStockModel = require("./models/StocksModels/MS");
+const MsftStockModel = require("./models/StocksModels/MSFT");
+const NflxStockModel = require("./models/StocksModels/NFLX");
+const NvdaStockModel = require("./models/StocksModels/NVDA");
+const PepStockModel = require("./models/StocksModels/PEP");
+const PyplStockModel = require("./models/StocksModels/PYPL");
+const TStockModel = require("./models/StocksModels/T");
+const TslaStockModel = require("./models/StocksModels/TSLA");
+const VzStockModel = require("./models/StocksModels/VZ");
+const WmtStockModel = require("./models/StocksModels/WMT");
 
 const AAPstock = AapStockModel(sequelize);
 const AAPLstock = AaplStockModel(sequelize);
@@ -111,4 +166,29 @@ module.exports = {
   TSLAstock,
   VZstock,
   WMTstock,
+  AVALANCHEcrypto,
+  BINANCEBITCOINcrypto,
+  BITCOINcrypto,
+  BITCOINCASHcrypto,
+  CARDANOcrypto,
+  CHAINLINKcrypto,
+  COSMOSHUBcrypto,
+  DAIcrypto,
+  DOGECOINcrypto,
+  ETHEREUMcrypto,
+  INTERNETCOMPUTERcrypto,
+  LEOTOKENcrypto,
+  LIDOSTAKEDcrypto,
+  LITECOINcrypto,
+  POLKADOTcrypto,
+  POLYGONcrypto,
+  RIPPLEcrypto,
+  SHIBAINUcrypto,
+  SOLANAcrypto,
+  TETHERcrypto,
+  TOINCOINcrypto,
+  TRONcrypto,
+  UNISWAPcrypto,
+  USDCcrypto,
+  WRAPPEDBITCOINcrypto,
 };

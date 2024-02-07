@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const msController = require('../../controllers/msController');
+const msController = require('../../controllers/StockControllers/msController');
 
 router.get('/quote', msController.getMS);
 

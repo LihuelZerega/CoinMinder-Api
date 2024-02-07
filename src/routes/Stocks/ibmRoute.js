@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const ibmController = require('../../controllers/ibmController');
+const ibmController = require('../../controllers/StockControllers/ibmController');
 
 router.get('/quote', ibmController.getIBM);
 

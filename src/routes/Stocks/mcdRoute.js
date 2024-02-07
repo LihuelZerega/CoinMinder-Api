@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const mcdController = require('../../controllers/mcdController');
+const mcdController = require('../../controllers/StockControllers/mcdController');
 
 router.get('/quote', mcdController.getMCD);
 

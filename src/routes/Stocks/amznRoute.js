@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const amznController = require('../../controllers/amznController');
+const amznController = require('../../controllers/StockControllers/amznController');
 
 router.get('/quote', amznController.getAMZN);
 

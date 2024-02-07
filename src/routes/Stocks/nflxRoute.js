@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const nflxController = require('../../controllers/nflxController');
+const nflxController = require('../../controllers/StockControllers/nflxController');
 
 router.get('/quote', nflxController.getNFLX);
 

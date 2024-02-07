@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const msftController = require('../../controllers/msftController');
+const msftController = require('../../controllers/StockControllers/msftController');
 
 router.get('/quote', msftController.getMSFT);
 

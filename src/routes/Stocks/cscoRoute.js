@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const cscoController = require('../../controllers/cscoController');
+const cscoController = require('../../controllers/StockControllers/cscoController');
 
 router.get('/quote', cscoController.getCSCO);
 

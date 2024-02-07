@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const nvdaController = require('../../controllers/nvdaController');
+const nvdaController = require('../../controllers/StockControllers/nvdaController');
 
 router.get('/quote', nvdaController.getNVDA);
 

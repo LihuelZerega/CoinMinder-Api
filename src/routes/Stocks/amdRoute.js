@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const amdController = require('../../controllers/amdController');
+const amdController = require('../../controllers/StockControllers/amdController');
 
 router.get('/quote', amdController.getAMD);
 

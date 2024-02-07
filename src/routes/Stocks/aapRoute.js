@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const aapController = require('../../controllers/aapController');
+const aapController = require('../../controllers/StockControllers/aapController');
 
 router.get('/quote', aapController.getAAP);
 

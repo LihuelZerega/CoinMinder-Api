@@ -9,11 +9,11 @@ const Amz = sequelize.define("amz", {
     },
     d: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     dp: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     h: {
       type: DataTypes.FLOAT,

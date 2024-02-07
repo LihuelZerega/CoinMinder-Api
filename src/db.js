@@ -30,6 +30,7 @@ const BaStockModel = require("./models/BA");
 const BacStockModel = require("./models/BAC");
 const CscoStockModel = require("./models/CSCO");
 const DisStockModel = require("./models/DIS");
+const FbStockModel = require("./models/FB");
 const GeStockModel = require("./models/GE");
 const GooglStockModel = require("./models/GOOGL");
 const GsStockModel = require("./models/GS");
@@ -58,12 +59,13 @@ const BAstock = BaStockModel(sequelize);
 const BACstock = BacStockModel(sequelize);
 const CSCOstock = CscoStockModel(sequelize);
 const DISstock = DisStockModel(sequelize);
+const FBstock = FbStockModel(sequelize);
 const GEstock = GeStockModel(sequelize);
 const GOOGLstock = GooglStockModel(sequelize);
 const GSstock = GsStockModel(sequelize);
 const IBMstock = IbmStockModel(sequelize);
 const INTCstock = IntcStockModel(sequelize);
-const Jpmstock = JpmStockModel(sequelize);
+const JPMstock = JpmStockModel(sequelize);
 const KOstock = KoStockModel(sequelize);
 const MCDstock = McdStockModel(sequelize);
 const MSstock = MsStockModel(sequelize);
@@ -90,12 +92,13 @@ module.exports = {
   BACstock,
   CSCOstock,
   DISstock,
+  FBstock,
   GEstock,
   GOOGLstock,
   GSstock,
   IBMstock,
   INTCstock,
-  Jpmstock,
+  JPMstock,
   KOstock,
   MCDstock,
   MSstock,

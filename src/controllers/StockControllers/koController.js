@@ -1,5 +1,5 @@
 const { KOstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateKOData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updateKOData');
 
 exports.getKO = async (req, res) => {
   try {

@@ -1,5 +1,5 @@
 const { PEPstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updatePEPData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updatePEPData');
 
 exports.getPEP = async (req, res) => {
   try {

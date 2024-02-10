@@ -1,5 +1,5 @@
 const { MSFTstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateMSFTData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updateMSFTData');
 
 exports.getMSFT = async (req, res) => {
   try {

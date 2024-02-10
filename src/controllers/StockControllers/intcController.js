@@ -1,5 +1,5 @@
 const { INTCstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateINTCData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updateINTCData');
 
 exports.getINTC = async (req, res) => {
   try {

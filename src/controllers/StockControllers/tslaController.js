@@ -1,5 +1,5 @@
 const { TSLAstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateTSLAData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updateTSLAData');
 
 exports.getTSLA = async (req, res) => {
   try {

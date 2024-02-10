@@ -1,5 +1,5 @@
 const { BITCOINcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateBITCOINData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateBITCOINData');
 
 exports.getBITCOIN = async (req, res) => {
   try {
@@ -9,8 +9,8 @@ exports.getBITCOIN = async (req, res) => {
     }
     res.json(bitcoinData);
   } catch (error) {
-    console.error('Error al obtener la cotización de BITCOIN:', error);
-    res.status(500).json({ error: 'Error interno del servidor' });
+    console.error('Error al obtener la cotización de BITCOIN:', error.message);
+    res.status(500).json({ error: 'Error al obtener la cotización de BITCOIN' });
   }
 };
 
@@ -19,7 +19,15 @@ exports.updateBITCOINData = async (req, res) => {
     await fetchDataAndStoreInDatabase();
     res.status(200).json({ message: 'Datos de BITCOIN actualizados correctamente.' });
   } catch (error) {
-    console.error('Error al actualizar los datos de BITCOIN:', error);
-    res.status(500).json({ error: 'Error interno del servidor' });
+    if (error.response && error.response.status === 404) {
+      console.error('Error al actualizar los datos de BITCOIN: No se encontró la cotización de BITCOIN');
+      res.status(404).json({ error: 'No se encontró la cotización de BITCOIN' });
+    } else if (error.response) {
+      console.error('Error al actualizar los datos de BITCOIN:', error.response.data.message);
+      res.status(error.response.status).json({ error: error.response.data.message });
+    } else {
+      console.error('Error al actualizar los datos de BITCOIN:', error.message);
+      res.status(500).json({ error: 'Error al actualizar los datos de BITCOIN' });
+    }
   }
 };

@@ -1,5 +1,5 @@
 const { GEstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateGEData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updateGEData');
 
 exports.getGE = async (req, res) => {
   try {

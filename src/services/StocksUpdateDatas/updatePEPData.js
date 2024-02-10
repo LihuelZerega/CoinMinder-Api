@@ -1,6 +1,6 @@
 const axios = require('axios');
 require("dotenv").config();
-const { PEPstock } = require('../db');
+const { PEPstock } = require('../../db');
 
 async function fetchDataAndStoreInDatabase() {
   try {

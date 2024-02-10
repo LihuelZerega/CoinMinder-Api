@@ -1,5 +1,5 @@
 const { JPMstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateJPMData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updateJPMData');
 
 exports.getJPM = async (req, res) => {
   try {

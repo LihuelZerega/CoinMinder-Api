@@ -1,6 +1,6 @@
 const axios = require('axios');
 require("dotenv").config();
-const { JPMstock } = require('../db');
+const { JPMstock } = require('../../db');
 
 async function fetchDataAndStoreInDatabase() {
   try {

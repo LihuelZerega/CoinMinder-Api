@@ -1,6 +1,6 @@
 const axios = require('axios');
 require("dotenv").config();
-const { GOOGLstock } = require('../db');
+const { GOOGLstock } = require('../../db');
 
 async function fetchDataAndStoreInDatabase() {
   try {

@@ -1,5 +1,5 @@
 const { Tstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateTData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updateTData');
 
 exports.getT = async (req, res) => {
   try {

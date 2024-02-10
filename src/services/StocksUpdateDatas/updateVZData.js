@@ -1,6 +1,6 @@
 const axios = require('axios');
 require("dotenv").config();
-const { VZstock } = require('../db');
+const { VZstock } = require('../../db');
 
 async function fetchDataAndStoreInDatabase() {
   try {

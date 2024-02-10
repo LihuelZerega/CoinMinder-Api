@@ -1,5 +1,5 @@
 const { WMTstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateWMTData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updateWMTData');
 
 exports.getWMT = async (req, res) => {
   try {

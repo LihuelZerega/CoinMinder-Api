@@ -7,6 +7,7 @@ const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const cors = require('cors');
 
+//Stocks imports
 const aapRoutes = require('./routes/Stocks/aapRoute');
 const aaplRoutes = require('./routes/Stocks/aaplRoute');
 const amdRoutes = require('./routes/Stocks/amdRoute');
@@ -35,6 +36,9 @@ const tRoutes = require('./routes/Stocks/tRoute');
 const tslaRoutes = require('./routes/Stocks/tslaRoute');
 const vzRoutes = require('./routes/Stocks/vzRoute');
 const wmtRoutes = require('./routes/Stocks/wmtRoute');
+
+//Cryptos Imports
+const bitcoinRoutes = require('./routes/Crypto/BitcoinRoute')
 
 const app = express();
 
@@ -87,6 +91,9 @@ app.use('/api/stock/t', tRoutes);
 app.use('/api/stock/tsla', tslaRoutes);
 app.use('/api/stock/vz', vzRoutes);
 app.use('/api/stock/wmt', wmtRoutes);
+
+// Cryptos endpoints
+app.use('/api/crypto/btc', bitcoinRoutes);
 
 app.use((err, req, res, next) => {
   const status = err.status || 500;

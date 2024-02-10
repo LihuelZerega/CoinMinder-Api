@@ -1,5 +1,5 @@
 const { NFLXstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateNFLXData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updateNFLXData');
 
 exports.getNFLX = async (req, res) => {
   try {

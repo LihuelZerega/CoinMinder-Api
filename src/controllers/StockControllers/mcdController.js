@@ -1,5 +1,5 @@
 const { MCDstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateMCDData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updateMCDData');
 
 exports.getMCD = async (req, res) => {
   try {

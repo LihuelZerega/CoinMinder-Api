@@ -1,5 +1,5 @@
 const { IBMstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateIBMData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updateIBMData');
 
 exports.getIBM = async (req, res) => {
   try {

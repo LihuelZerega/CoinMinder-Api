@@ -1,5 +1,5 @@
 const { PYPLstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updatePYPLData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updatePYPLData');
 
 exports.getPYPL = async (req, res) => {
   try {

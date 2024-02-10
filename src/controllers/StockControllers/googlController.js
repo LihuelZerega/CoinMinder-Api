@@ -1,5 +1,5 @@
 const { GOOGLstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateGOOGLData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updateGOOGLData');
 
 exports.getGOOGL = async (req, res) => {
   try {

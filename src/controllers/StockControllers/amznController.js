@@ -1,5 +1,5 @@
 const { AMZNstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateAMZNData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updateAMZNData');
 
 exports.getAMZN = async (req, res) => {
   try {

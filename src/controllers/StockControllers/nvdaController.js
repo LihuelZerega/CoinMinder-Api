@@ -1,5 +1,5 @@
 const { NVDAstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateNVDAData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updateNVDAData');
 
 exports.getNVDA = async (req, res) => {
   try {

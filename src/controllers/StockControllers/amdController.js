@@ -1,5 +1,5 @@
 const { AMDstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateAMDData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updateAMDData');
 
 exports.getAMD = async (req, res) => {
   try {

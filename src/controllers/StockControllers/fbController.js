@@ -1,5 +1,5 @@
 const { FBstock } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateFBData');
+const { fetchDataAndStoreInDatabase } = require('../../services/StocksUpdateDatas/updateFBData');
 
 exports.getFB = async (req, res) => {
   try {

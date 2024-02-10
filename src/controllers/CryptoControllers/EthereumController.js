@@ -1,5 +1,5 @@
 const { ETHEREUMcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateETHEREUMData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateETHEREUMData');
 
 exports.getETHEREUM = async (req, res) => {
   try {

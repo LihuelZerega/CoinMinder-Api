@@ -1,5 +1,5 @@
 const { COSMOSHUBcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateCOSMOSHUBData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateCOSMOSHUBData');
 
 exports.getCOSMOSHUB = async (req, res) => {
   try {

@@ -1,5 +1,5 @@
 const { USDCcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateUSDCData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateUSDCData');
 
 exports.getUSDC = async (req, res) => {
   try {

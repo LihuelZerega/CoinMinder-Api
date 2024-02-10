@@ -1,5 +1,5 @@
 const { DAIcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateDAIData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateDAIData');
 
 exports.getDAI = async (req, res) => {
   try {

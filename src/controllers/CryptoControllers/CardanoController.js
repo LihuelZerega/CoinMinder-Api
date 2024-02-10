@@ -1,5 +1,5 @@
 const { CARDANOcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateCARDANOData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateCARDANOData');
 
 exports.getCARDANO = async (req, res) => {
   try {

@@ -1,5 +1,5 @@
 const { CHAINLINKcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateCHAINLINKData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateCHAINLINKData');
 
 exports.getCHAINLINK = async (req, res) => {
   try {

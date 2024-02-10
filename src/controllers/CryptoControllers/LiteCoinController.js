@@ -1,5 +1,5 @@
 const { LITECOINcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateLITECOINData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateLITECOINData');
 
 exports.getLITECOIN = async (req, res) => {
   try {

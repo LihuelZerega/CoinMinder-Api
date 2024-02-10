@@ -1,5 +1,5 @@
 const { UNISWAPcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateUNISWAPData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateUNISWAPData');
 
 exports.getUNISWAP = async (req, res) => {
   try {

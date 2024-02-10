@@ -1,5 +1,5 @@
 const { POLKADOTcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updatePOLKADOTData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updatePOLKADOTData');
 
 exports.getPOLKADOT = async (req, res) => {
   try {

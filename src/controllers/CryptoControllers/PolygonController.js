@@ -1,5 +1,5 @@
 const { POLYGONcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updatePOLYGONData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updatePOLYGONData');
 
 exports.getPOLYGON = async (req, res) => {
   try {

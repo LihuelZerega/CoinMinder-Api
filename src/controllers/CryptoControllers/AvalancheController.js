@@ -1,5 +1,5 @@
 const { AVALANCHEcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateAVALANCHEData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateAVALANCHEData');
 
 exports.getAVALANCHE = async (req, res) => {
   try {

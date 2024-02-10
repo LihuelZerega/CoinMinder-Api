@@ -1,5 +1,5 @@
 const { SHIBAINUcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateSHIBAINUData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateSHIBAINUData');
 
 exports.getSHIBAINU = async (req, res) => {
   try {

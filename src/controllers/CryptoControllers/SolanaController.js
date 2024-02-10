@@ -1,5 +1,5 @@
 const { SOLANAcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateSOLANAData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateSOLANAData');
 
 exports.getSOLANA = async (req, res) => {
   try {

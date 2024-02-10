@@ -1,5 +1,5 @@
 const { LIDOSTAKEDcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateLIDOSTAKEDData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateLIDOSTAKEDData');
 
 exports.getLIDOSTAKED = async (req, res) => {
   try {

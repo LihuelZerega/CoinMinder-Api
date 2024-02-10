@@ -1,5 +1,5 @@
 const { RIPPLEcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateRIPPLEData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateRIPPLEData');
 
 exports.getRIPPLE = async (req, res) => {
   try {

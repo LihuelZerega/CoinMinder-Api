@@ -1,5 +1,5 @@
 const { INTERNETCOMPUTERcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateINTERNETCOMPUTERData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateINTERNETCOMPUTERData');
 
 exports.getINTERNETCOMPUTER = async (req, res) => {
   try {

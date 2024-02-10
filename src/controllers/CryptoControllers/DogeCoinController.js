@@ -1,5 +1,5 @@
 const { DOGECOINcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateDOGECOINData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateDOGECOINData');
 
 exports.getDOGECOIN = async (req, res) => {
   try {

@@ -1,5 +1,5 @@
 const { LEOTOKENcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateLEOTOKENData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateLEOTOKENData');
 
 exports.getLEOTOKEN = async (req, res) => {
   try {

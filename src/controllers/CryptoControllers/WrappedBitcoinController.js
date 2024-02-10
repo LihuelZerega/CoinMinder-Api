@@ -1,5 +1,5 @@
 const { WRAPPEDBITCOINcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateWRAPPEDBITCOINData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateWRAPPEDBITCOINData');
 
 exports.getWRAPPEDBITCOIN = async (req, res) => {
   try {

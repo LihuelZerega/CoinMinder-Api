@@ -1,5 +1,5 @@
 const { TRONcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateTRONData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateTRONData');
 
 exports.getTRON = async (req, res) => {
   try {

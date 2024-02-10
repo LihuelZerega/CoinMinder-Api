@@ -1,5 +1,5 @@
 const { BITCOINCASHcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateBITCOINCASHData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateBITCOINCASHData');
 
 exports.getBITCOINCASH = async (req, res) => {
   try {

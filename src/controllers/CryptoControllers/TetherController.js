@@ -1,5 +1,5 @@
 const { TETHERcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/updateTETHERData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateTETHERData');
 
 exports.getTETHER = async (req, res) => {
   try {

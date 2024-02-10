@@ -3,10 +3,6 @@ const { sequelize } = require('../../db');
 
 module.exports = (sequelize) => {
   const Ripple = sequelize.define("ripple", {
-    id: {
-      type: DataTypes.STRING,
-      primaryKey: true
-    },
     symbol: {
       type: DataTypes.STRING,
       allowNull: false

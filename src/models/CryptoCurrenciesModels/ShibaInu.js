@@ -3,10 +3,6 @@ const { sequelize } = require('../../db');
 
 module.exports = (sequelize) => {
   const ShibaInu = sequelize.define("shibainu", {
-    id: {
-      type: DataTypes.STRING,
-      primaryKey: true
-    },
     symbol: {
       type: DataTypes.STRING,
       allowNull: false

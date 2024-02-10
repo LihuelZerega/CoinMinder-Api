@@ -1,5 +1,5 @@
 const { TOINCOINcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateTOINCOINData');
+const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateTONCOINData');
 
 exports.getTOINCOIN = async (req, res) => {
   try {

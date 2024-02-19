@@ -4,6 +4,6 @@ const SolanaController = require('../../controllers/CryptoControllers/SolanaCont
 
 router.get('/', SolanaController.getSOLANA);
 
-router.post('/update', SolanaController.updateSOLANAData);
+// router.post('/update', SolanaController.updateSOLANAData);
 
 module.exports = router;

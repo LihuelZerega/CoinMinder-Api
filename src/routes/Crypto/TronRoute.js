@@ -4,6 +4,6 @@ const TronController = require('../../controllers/CryptoControllers/TronControll
 
 router.get('/', TronController.getTRON);
 
-router.post('/update', TronController.updateTRONData);
+// router.post('/update', TronController.updateTRONData);
 
 module.exports = router;

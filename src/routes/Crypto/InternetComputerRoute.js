@@ -4,6 +4,6 @@ const InternetComputerController = require('../../controllers/CryptoControllers/
 
 router.get('/', InternetComputerController.getINTERNETCOMPUTER);
 
-router.post('/update', InternetComputerController.updateINTERNETCOMPUTERData);
+// router.post('/update', InternetComputerController.updateINTERNETCOMPUTERData);
 
 module.exports = router;

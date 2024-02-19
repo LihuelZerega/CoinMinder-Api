@@ -4,6 +4,6 @@ const PolkadotController = require('../../controllers/CryptoControllers/Polkadot
 
 router.get('/', PolkadotController.getPOLKADOT);
 
-router.post('/update', PolkadotController.updatePOLKADOTData);
+// router.post('/update', PolkadotController.updatePOLKADOTData);
 
 module.exports = router;

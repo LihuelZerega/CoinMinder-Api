@@ -14,12 +14,12 @@ exports.getBITCOINCASH = async (req, res) => {
   }
 };
 
-exports.updateBITCOINCASHData = async (req, res) => {
-  try {
-    await fetchDataAndStoreInDatabase();
-    res.status(200).json({ message: 'Datos de BITCOINCASH actualizados correctamente.' });
-  } catch (error) {
-    console.error('Error al actualizar los datos de BITCOINCASH:', error);
-    res.status(500).json({ error: 'Error interno del servidor' });
-  }
-};
+// exports.updateBITCOINCASHData = async (req, res) => {
+//   try {
+//     await fetchDataAndStoreInDatabase();
+//     res.status(200).json({ message: 'Datos de BITCOINCASH actualizados correctamente.' });
+//   } catch (error) {
+//     console.error('Error al actualizar los datos de BITCOINCASH:', error);
+//     res.status(500).json({ error: 'Error interno del servidor' });
+//   }
+// };

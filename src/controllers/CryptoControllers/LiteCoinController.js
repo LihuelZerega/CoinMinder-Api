@@ -14,12 +14,12 @@ exports.getLITECOIN = async (req, res) => {
   }
 };
 
-exports.updateLITECOINData = async (req, res) => {
-  try {
-    await fetchDataAndStoreInDatabase();
-    res.status(200).json({ message: 'Datos de LITECOIN actualizados correctamente.' });
-  } catch (error) {
-    console.error('Error al actualizar los datos de LITECOIN:', error);
-    res.status(500).json({ error: 'Error interno del servidor' });
-  }
-};
+// exports.updateLITECOINData = async (req, res) => {
+//   try {
+//     await fetchDataAndStoreInDatabase();
+//     res.status(200).json({ message: 'Datos de LITECOIN actualizados correctamente.' });
+//   } catch (error) {
+//     console.error('Error al actualizar los datos de LITECOIN:', error);
+//     res.status(500).json({ error: 'Error interno del servidor' });
+//   }
+// };

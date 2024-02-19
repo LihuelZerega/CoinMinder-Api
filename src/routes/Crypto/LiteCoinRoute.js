@@ -4,6 +4,6 @@ const LiteCoinController = require('../../controllers/CryptoControllers/LiteCoin
 
 router.get('/', LiteCoinController.getLITECOIN);
 
-router.post('/update', LiteCoinController.updateLITECOINData);
+// router.post('/update', LiteCoinController.updateLITECOINData);
 
 module.exports = router;

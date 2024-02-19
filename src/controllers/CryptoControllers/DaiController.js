@@ -14,12 +14,12 @@ exports.getDAI = async (req, res) => {
   }
 };
 
-exports.updateDAIData = async (req, res) => {
-  try {
-    await fetchDataAndStoreInDatabase();
-    res.status(200).json({ message: 'Datos de DAI actualizados correctamente.' });
-  } catch (error) {
-    console.error('Error al actualizar los datos de DAI:', error);
-    res.status(500).json({ error: 'Error interno del servidor' });
-  }
-};
+// exports.updateDAIData = async (req, res) => {
+//   try {
+//     await fetchDataAndStoreInDatabase();
+//     res.status(200).json({ message: 'Datos de DAI actualizados correctamente.' });
+//   } catch (error) {
+//     console.error('Error al actualizar los datos de DAI:', error);
+//     res.status(500).json({ error: 'Error interno del servidor' });
+//   }
+// };

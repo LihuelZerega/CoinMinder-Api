@@ -4,6 +4,6 @@ const EthereumController = require('../../controllers/CryptoControllers/Ethereum
 
 router.get('/', EthereumController.getETHEREUM);
 
-router.post('/update', EthereumController.updateETHEREUMData);
+// router.post('/update', EthereumController.updateETHEREUMData);
 
 module.exports = router;

@@ -14,12 +14,12 @@ exports.getETHEREUM = async (req, res) => {
   }
 };
 
-exports.updateETHEREUMData = async (req, res) => {
-  try {
-    await fetchDataAndStoreInDatabase();
-    res.status(200).json({ message: 'Datos de ETHEREUM actualizados correctamente.' });
-  } catch (error) {
-    console.error('Error al actualizar los datos de ETHEREUM:', error);
-    res.status(500).json({ error: 'Error interno del servidor' });
-  }
-};
+// exports.updateETHEREUMData = async (req, res) => {
+//   try {
+//     await fetchDataAndStoreInDatabase();
+//     res.status(200).json({ message: 'Datos de ETHEREUM actualizados correctamente.' });
+//   } catch (error) {
+//     console.error('Error al actualizar los datos de ETHEREUM:', error);
+//     res.status(500).json({ error: 'Error interno del servidor' });
+//   }
+// };

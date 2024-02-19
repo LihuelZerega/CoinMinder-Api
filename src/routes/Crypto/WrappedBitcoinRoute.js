@@ -4,6 +4,6 @@ const WrappedBitcoinController = require('../../controllers/CryptoControllers/Wr
 
 router.get('/', WrappedBitcoinController.getWRAPPEDBITCOIN);
 
-router.post('/update', WrappedBitcoinController.updateWRAPPEDBITCOINData);
+// router.post('/update', WrappedBitcoinController.updateWRAPPEDBITCOINData);
 
 module.exports = router;

@@ -4,6 +4,6 @@ const TetherController = require('../../controllers/CryptoControllers/TetherCont
 
 router.get('/', TetherController.getTETHER);
 
-router.post('/update', TetherController.updateTETHERData);
+// router.post('/update', TetherController.updateTETHERData);
 
 module.exports = router;

@@ -14,12 +14,12 @@ exports.getINTERNETCOMPUTER = async (req, res) => {
   }
 };
 
-exports.updateINTERNETCOMPUTERData = async (req, res) => {
-  try {
-    await fetchDataAndStoreInDatabase();
-    res.status(200).json({ message: 'Datos de INTERNETCOMPUTER actualizados correctamente.' });
-  } catch (error) {
-    console.error('Error al actualizar los datos de INTERNETCOMPUTER:', error);
-    res.status(500).json({ error: 'Error interno del servidor' });
-  }
-};
+// exports.updateINTERNETCOMPUTERData = async (req, res) => {
+//   try {
+//     await fetchDataAndStoreInDatabase();
+//     res.status(200).json({ message: 'Datos de INTERNETCOMPUTER actualizados correctamente.' });
+//   } catch (error) {
+//     console.error('Error al actualizar los datos de INTERNETCOMPUTER:', error);
+//     res.status(500).json({ error: 'Error interno del servidor' });
+//   }
+// };

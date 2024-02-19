@@ -4,6 +4,6 @@ const UsdcController = require('../../controllers/CryptoControllers/UsdcControll
 
 router.get('/', UsdcController.getUSDC);
 
-router.post('/update', UsdcController.updateUSDCData);
+// router.post('/update', UsdcController.updateUSDCData);
 
 module.exports = router;

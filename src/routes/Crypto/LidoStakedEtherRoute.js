@@ -4,6 +4,6 @@ const LidoStakedEtherController = require('../../controllers/CryptoControllers/L
 
 router.get('/', LidoStakedEtherController.getLIDOSTAKED);
 
-router.post('/update', LidoStakedEtherController.updateLIDOSTAKEDData);
+// router.post('/update', LidoStakedEtherController.updateLIDOSTAKEDData);
 
 module.exports = router;

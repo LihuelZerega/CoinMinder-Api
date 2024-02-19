@@ -4,6 +4,6 @@ const PolygonController = require('../../controllers/CryptoControllers/PolygonCo
 
 router.get('/', PolygonController.getPOLYGON);
 
-router.post('/update', PolygonController.updatePOLYGONData);
+// router.post('/update', PolygonController.updatePOLYGONData);
 
 module.exports = router;

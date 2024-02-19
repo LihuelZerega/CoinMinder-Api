@@ -14,12 +14,12 @@ exports.getUSDC = async (req, res) => {
   }
 };
 
-exports.updateUSDCData = async (req, res) => {
-  try {
-    await fetchDataAndStoreInDatabase();
-    res.status(200).json({ message: 'Datos de USDC actualizados correctamente.' });
-  } catch (error) {
-    console.error('Error al actualizar los datos de USDC:', error);
-    res.status(500).json({ error: 'Error interno del servidor' });
-  }
-};
+// exports.updateUSDCData = async (req, res) => {
+//   try {
+//     await fetchDataAndStoreInDatabase();
+//     res.status(200).json({ message: 'Datos de USDC actualizados correctamente.' });
+//   } catch (error) {
+//     console.error('Error al actualizar los datos de USDC:', error);
+//     res.status(500).json({ error: 'Error interno del servidor' });
+//   }
+// };

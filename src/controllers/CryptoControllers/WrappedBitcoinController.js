@@ -14,12 +14,12 @@ exports.getWRAPPEDBITCOIN = async (req, res) => {
   }
 };
 
-exports.updateWRAPPEDBITCOINData = async (req, res) => {
-  try {
-    await fetchDataAndStoreInDatabase();
-    res.status(200).json({ message: 'Datos de WRAPPEDBITCOIN actualizados correctamente.' });
-  } catch (error) {
-    console.error('Error al actualizar los datos de WRAPPEDBITCOIN:', error);
-    res.status(500).json({ error: 'Error interno del servidor' });
-  }
-};
+// exports.updateWRAPPEDBITCOINData = async (req, res) => {
+//   try {
+//     await fetchDataAndStoreInDatabase();
+//     res.status(200).json({ message: 'Datos de WRAPPEDBITCOIN actualizados correctamente.' });
+//   } catch (error) {
+//     console.error('Error al actualizar los datos de WRAPPEDBITCOIN:', error);
+//     res.status(500).json({ error: 'Error interno del servidor' });
+//   }
+// };

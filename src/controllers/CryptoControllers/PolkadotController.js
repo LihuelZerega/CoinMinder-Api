@@ -14,12 +14,12 @@ exports.getPOLKADOT = async (req, res) => {
   }
 };
 
-exports.updatePOLKADOTData = async (req, res) => {
-  try {
-    await fetchDataAndStoreInDatabase();
-    res.status(200).json({ message: 'Datos de POLKADOT actualizados correctamente.' });
-  } catch (error) {
-    console.error('Error al actualizar los datos de POLKADOT:', error);
-    res.status(500).json({ error: 'Error interno del servidor' });
-  }
-};
+// exports.updatePOLKADOTData = async (req, res) => {
+//   try {
+//     await fetchDataAndStoreInDatabase();
+//     res.status(200).json({ message: 'Datos de POLKADOT actualizados correctamente.' });
+//   } catch (error) {
+//     console.error('Error al actualizar los datos de POLKADOT:', error);
+//     res.status(500).json({ error: 'Error interno del servidor' });
+//   }
+// };

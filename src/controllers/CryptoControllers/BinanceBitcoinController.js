@@ -1,5 +1,5 @@
 const { BINANCEBITCOINcrypto } = require('../../db');
-const { updateBitcoinData } = require('../../services/CryptosUpdateDatas/binancebitcoinUpdater');
+const { updateBinancebitcoinData } = require('../../services/CryptosUpdateDatas/binancebitcoinUpdater');
 
 exports.getBINANCEBITCOIN = async (req, res) => {
     try {

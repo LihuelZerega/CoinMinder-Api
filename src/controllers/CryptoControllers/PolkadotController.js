@@ -1,25 +1,15 @@
 const { POLKADOTcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updatePOLKADOTData');
+const { updatePolkadotData } = require('../../services/CryptosUpdateDatas/updatePOLKADOTData');
 
 exports.getPOLKADOT = async (req, res) => {
-  try {
-    const polkadotData = await POLKADOTcrypto.findOne();
-    if (!polkadotData) {
-      return res.status(404).json({ error: 'No se encontraron datos para POLKADOT' });
-    }
-    res.json(polkadotData);
-  } catch (error) {
-    console.error('Error al obtener la cotización de POLKADOT:', error);
-    res.status(500).json({ error: 'Error interno del servidor' });
-  }
-};
+    try {
+        await updatePolkadotData();
 
-// exports.updatePOLKADOTData = async (req, res) => {
-//   try {
-//     await fetchDataAndStoreInDatabase();
-//     res.status(200).json({ message: 'Datos de POLKADOT actualizados correctamente.' });
-//   } catch (error) {
-//     console.error('Error al actualizar los datos de POLKADOT:', error);
-//     res.status(500).json({ error: 'Error interno del servidor' });
-//   }
-// };
+        let polkadotData = await POLKADOTcrypto.findOne();
+
+        res.json(polkadotData);
+    } catch (error) {
+        console.error('Error al obtener la cotización de POLKADOT:', error.message);
+        res.status(500).json({ error: 'Error al obtener la cotización de POLKADOT' });
+    }
+};

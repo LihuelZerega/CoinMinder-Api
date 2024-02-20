@@ -2,98 +2,98 @@ const { DataTypes } = require('sequelize');
 const { sequelize } = require('../../db');
 
 module.exports = (sequelize) => {
-  const Polkadot = sequelize.define("polkadot", {
+  const Polkadot = sequelize.define("Polkadot", {
     symbol: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     image: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     current_price: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     market_cap: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     market_cap_rank: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
     fully_diluted_valuation: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     total_volume: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     high_24h: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     low_24h: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     price_change_24h: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     price_change_percentage_24h: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     market_cap_change_24h: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     market_cap_change_percentage_24h: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     circulating_supply: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     total_supply: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     max_supply: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     ath: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     ath_change_percentage: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     ath_date: {
       type: DataTypes.DATE,
-      allowNull: false
+      allowNull: true
     },
     atl: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     atl_change_percentage: {
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     atl_date: {
       type: DataTypes.DATE,
-      allowNull: false
+      allowNull: true
     },
     roi: {
       type: DataTypes.FLOAT,
@@ -101,8 +101,10 @@ module.exports = (sequelize) => {
     },
     last_updated: {
       type: DataTypes.DATE,
-      allowNull: false
+      allowNull: true
     }
+  }, {
+    tableName: 'polkadots'
   });
   
   return Polkadot;

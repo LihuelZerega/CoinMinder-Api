@@ -4,6 +4,4 @@ const DogeCoinController = require('../../controllers/CryptoControllers/DogeCoin
 
 router.get('/', DogeCoinController.getDOGECOIN);
 
-// router.post('/update', DogeCoinController.updateDOGECOINData);
-
 module.exports = router;

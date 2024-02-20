@@ -4,6 +4,4 @@ const ToincoinController = require('../../controllers/CryptoControllers/Toincoin
 
 router.get('/', ToincoinController.getTOINCOIN);
 
-// router.post('/update', ToincoinController.updateTOINCOINData);
-
 module.exports = router;

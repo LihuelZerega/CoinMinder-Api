@@ -4,6 +4,4 @@ const LeoTokenController = require('../../controllers/CryptoControllers/LeoToken
 
 router.get('/', LeoTokenController.getLEOTOKEN);
 
-// router.post('/update', LeoTokenController.updateLEOTOKENData);
-
 module.exports = router;

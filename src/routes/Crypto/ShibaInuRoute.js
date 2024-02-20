@@ -4,6 +4,4 @@ const ShibaInuController = require('../../controllers/CryptoControllers/ShibaInu
 
 router.get('/', ShibaInuController.getSHIBAINU);
 
-// router.post('/update', ShibaInuController.updateSHIBAINUData);
-
 module.exports = router;

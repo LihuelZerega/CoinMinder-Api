@@ -4,6 +4,4 @@ const ChainLinkController = require('../../controllers/CryptoControllers/ChainLi
 
 router.get('/', ChainLinkController.getCHAINLINK);
 
-// router.post('/update', ChainLinkController.updateCHAINLINKData);
-
 module.exports = router;

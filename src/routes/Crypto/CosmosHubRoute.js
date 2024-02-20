@@ -4,6 +4,4 @@ const CosmosHubController = require('../../controllers/CryptoControllers/CosmosH
 
 router.get('/', CosmosHubController.getCOSMOSHUB);
 
-// router.post('/update', CosmosHubController.updateCOSMOSHUBData);
-
 module.exports = router;

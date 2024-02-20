@@ -4,6 +4,4 @@ const UniSwapController = require('../../controllers/CryptoControllers/UniSwapCo
 
 router.get('/', UniSwapController.getUNISWAP);
 
-// router.post('/update', UniSwapController.updateUNISWAPData);
-
 module.exports = router;

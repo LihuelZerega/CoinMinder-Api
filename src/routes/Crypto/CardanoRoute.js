@@ -4,6 +4,4 @@ const CardanoController = require('../../controllers/CryptoControllers/CardanoCo
 
 router.get('/', CardanoController.getCARDANO);
 
-// router.post('/update', CardanoController.updateCARDANOData);
-
 module.exports = router;

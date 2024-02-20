@@ -4,6 +4,4 @@ const BitcoinController = require('../../controllers/CryptoControllers/BitcoinCo
 
 router.get('/', BitcoinController.getBITCOIN);
 
-router.post('/update', BitcoinController.updateBITCOINData);
-
 module.exports = router;

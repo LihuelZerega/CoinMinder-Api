@@ -4,6 +4,4 @@ const BinanceBitcoinController = require('../../controllers/CryptoControllers/Bi
 
 router.get('/', BinanceBitcoinController.getBINANCEBITCOIN);
 
-router.post('/update', BinanceBitcoinController.updateBINANCEBITCOINData);
-
 module.exports = router;

@@ -1,25 +1,15 @@
 const { BINANCEBITCOINcrypto } = require('../../db');
-const { fetchDataAndStoreInDatabase } = require('../../services/CryptosUpdateDatas/updateBINANCEBITCOINData');
+const { updateBitcoinData } = require('../../services/CryptosUpdateDatas/binancebitcoinUpdater');
 
 exports.getBINANCEBITCOIN = async (req, res) => {
-  try {
-    const binancebitcoinData = await BINANCEBITCOINcrypto.findOne();
-    if (!binancebitcoinData) {
-      return res.status(404).json({ error: 'No se encontraron datos para BINANCEBITCOIN' });
-    }
-    res.json(binancebitcoinData);
-  } catch (error) {
-    console.error('Error al obtener la cotización de BINANCEBITCOIN:', error);
-    res.status(500).json({ error: 'Error interno del servidor' });
-  }
-};
+    try {
+        await updateBinancebitcoinData();
 
-// exports.updateBINANCEBITCOINData = async (req, res) => {
-//   try {
-//     await fetchDataAndStoreInDatabase();
-//     res.status(200).json({ message: 'Datos de BINANCEBITCOIN actualizados correctamente.' });
-//   } catch (error) {
-//     console.error('Error al actualizar los datos de BINANCEBITCOIN:', error);
-//     res.status(500).json({ error: 'Error interno del servidor' });
-//   }
-// };
+        let binancebitcoinData = await BINANCEBITCOINcrypto.findOne();
+
+        res.json(binancebitcoinData);
+    } catch (error) {
+        console.error('Error al obtener la cotización de BINANCEBITCOIN:', error.message);
+        res.status(500).json({ error: 'Error al obtener la cotización de BINANCEBITCOIN' });
+    }
+};

@@ -4,6 +4,4 @@ const AvalancheController = require('../../controllers/CryptoControllers/Avalanc
 
 router.get('/', AvalancheController.getAVALANCHE);
 
-router.post('/update', AvalancheController.updateAVALANCHEData);
-
 module.exports = router;

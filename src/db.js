@@ -49,31 +49,31 @@ const UniSwapCryptoModel = require("./models/CryptoCurrenciesModels/UniSwap");
 const UsdcCryptoModel = require("./models/CryptoCurrenciesModels/Usdc");
 const WrappedBitcoinCryptoModel = require("./models/CryptoCurrenciesModels/WrappedBitcoin");
 
-// const AVALANCHEcrypto = AvalancheCryptoModel(sequelize);
-// const BINANCEBITCOINcrypto = BinanceBitcoinCryptoModel(sequelize);
+const AVALANCHEcrypto = AvalancheCryptoModel(sequelize);
+const BINANCEBITCOINcrypto = BinanceBitcoinCryptoModel(sequelize);
 const BITCOINcrypto = BitcoinCryptoModel(sequelize);
-// const BITCOINCASHcrypto = BitcoinCashCryptoModel(sequelize);
-// const CARDANOcrypto = CardanoCryptoModel(sequelize);
-// const CHAINLINKcrypto = ChainLinkCryptoModel(sequelize);
-// const COSMOSHUBcrypto = CosmosHubCryptoModel(sequelize);
-// const DAIcrypto = DaiCryptoModel(sequelize);
-// const DOGECOINcrypto = DogeCoinCryptoModel(sequelize);
-// const ETHEREUMcrypto = EthereumCryptoModel(sequelize);
-// const INTERNETCOMPUTERcrypto = InternetComputerCryptoModel(sequelize);
-// const LEOTOKENcrypto = LeoTokenCryptoModel(sequelize);
-// const LIDOSTAKEDcrypto = LidoStakedEtherCryptoModel(sequelize);
-// const LITECOINcrypto = LiteCoinCryptoModel(sequelize);
-// const POLKADOTcrypto = PolkadotCryptoModel(sequelize);
-// const POLYGONcrypto = PolygonCryptoModel(sequelize);
-// const RIPPLEcrypto = RippleCryptoModel(sequelize);
-// const SHIBAINUcrypto = ShibaInuCryptoModel(sequelize);
-// const SOLANAcrypto = SolanaCryptoModel(sequelize);
-// const TETHERcrypto = TetherCryptoModel(sequelize);
-// const TOINCOINcrypto = ToincoinCryptoModel(sequelize);
-// const TRONcrypto = TronCryptoModel(sequelize);
-// const UNISWAPcrypto = UniSwapCryptoModel(sequelize);
-// const USDCcrypto = UsdcCryptoModel(sequelize);
-// const WRAPPEDBITCOINcrypto = WrappedBitcoinCryptoModel(sequelize);
+const BITCOINCASHcrypto = BitcoinCashCryptoModel(sequelize);
+const CARDANOcrypto = CardanoCryptoModel(sequelize);
+const CHAINLINKcrypto = ChainLinkCryptoModel(sequelize);
+const COSMOSHUBcrypto = CosmosHubCryptoModel(sequelize);
+const DAIcrypto = DaiCryptoModel(sequelize);
+const DOGECOINcrypto = DogeCoinCryptoModel(sequelize);
+const ETHEREUMcrypto = EthereumCryptoModel(sequelize);
+const INTERNETCOMPUTERcrypto = InternetComputerCryptoModel(sequelize);
+const LEOTOKENcrypto = LeoTokenCryptoModel(sequelize);
+const LIDOSTAKEDcrypto = LidoStakedEtherCryptoModel(sequelize);
+const LITECOINcrypto = LiteCoinCryptoModel(sequelize);
+const POLKADOTcrypto = PolkadotCryptoModel(sequelize);
+const POLYGONcrypto = PolygonCryptoModel(sequelize);
+const RIPPLEcrypto = RippleCryptoModel(sequelize);
+const SHIBAINUcrypto = ShibaInuCryptoModel(sequelize);
+const SOLANAcrypto = SolanaCryptoModel(sequelize);
+const TETHERcrypto = TetherCryptoModel(sequelize);
+const TOINCOINcrypto = ToincoinCryptoModel(sequelize);
+const TRONcrypto = TronCryptoModel(sequelize);
+const UNISWAPcrypto = UniSwapCryptoModel(sequelize);
+const USDCcrypto = UsdcCryptoModel(sequelize);
+const WRAPPEDBITCOINcrypto = WrappedBitcoinCryptoModel(sequelize);
 
 //Stocks
 const AapStockModel = require("./models/StocksModels/AAP");
@@ -166,10 +166,10 @@ module.exports = {
   TSLAstock,
   VZstock,
   WMTstock,
-  // AVALANCHEcrypto,
-  // BINANCEBITCOINcrypto,
+  AVALANCHEcrypto,
+  BINANCEBITCOINcrypto,
   BITCOINcrypto,
-  // BITCOINCASHcrypto,
+  BITCOINCASHcrypto,
   // CARDANOcrypto,
   // CHAINLINKcrypto,
   // COSMOSHUBcrypto,

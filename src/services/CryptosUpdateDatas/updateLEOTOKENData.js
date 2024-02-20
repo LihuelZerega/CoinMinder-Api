@@ -1,49 +1,78 @@
-// const axios = require('axios');
-// require("dotenv").config();
-// const { LEOTOKENcrypto } = require('../../db');
+const axios = require('axios');
+const { LEOTOKENcrypto, sequelize } = require('../../db');
 
-// async function fetchDataAndStoreInDatabase() {
-//   try {
-//     const response = await axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=leo-token&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en`);
-    
-//     if (response.data && response.data.length > 0) {
-//       const bitcoinData = response.data[0];
+async function updateLeotokenData() {
+    try {
+        const tableExists = await sequelize.getQueryInterface().showAllTables().then(tables => {
+            return tables.includes('LEOTOKENcryptos');
+        });
 
-//       const { symbol, name, image, current_price, market_cap, market_cap_rank, fully_diluted_valuation, total_volume, high_24h, low_24h, price_change_24h, price_change_percentage_24h, market_cap_change_24h, market_cap_change_percentage_24h, circulating_supply, total_supply, max_supply, ath, ath_change_percentage, ath_date, roi, last_updated } = bitcoinData;
+        if (tableExists) {
+            await LEOTOKENcrypto.destroy({ where: {} });
+        }
 
-//       await LEOTOKENcrypto.upsert({
-//         symbol,
-//         name,
-//         image,
-//         current_price,
-//         market_cap,
-//         market_cap_rank,
-//         fully_diluted_valuation,
-//         total_volume,
-//         high_24h,
-//         low_24h,
-//         price_change_24h,
-//         price_change_percentage_24h,
-//         market_cap_change_24h,
-//         market_cap_change_percentage_24h,
-//         circulating_supply,
-//         total_supply,
-//         max_supply,
-//         ath,
-//         ath_change_percentage,
-//         ath_date,
-//         roi,
-//         last_updated
-//       });
+        const response = await axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=leo-token&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en`);
 
-//       console.log('Datos de LEOTOKEN actualizados correctamente.');
-//     } else {
-//       console.error('La respuesta de la API de CoinGecko está vacía o no contiene datos para LEOTOKEN.');
-//     }
-//   } catch (error) {
-//     console.error('Error al actualizar los datos de LEOTOKEN:', error.message);
-//     throw error;
-//   }
-// }
+        if (response.data && response.data.length > 0) {
+            const leotokenData = response.data[0];
 
-// fetchDataAndStoreInDatabase();
+            const {
+                symbol,
+                name,
+                image, 
+                current_price,
+                market_cap,
+                market_cap_rank,
+                fully_diluted_valuation,
+                total_volume,
+                high_24h,
+                low_24h,
+                price_change_24h,
+                price_change_percentage_24h,
+                market_cap_change_24h,
+                market_cap_change_percentage_24h,
+                circulating_supply,
+                total_supply,
+                max_supply,
+                ath,
+                ath_change_percentage,
+                ath_date,
+                roi,
+                last_updated
+            } = leotokenData;
+
+            await LEOTOKENcrypto.create({
+                symbol,
+                name,
+                image,
+                current_price,
+                market_cap,
+                market_cap_rank,
+                fully_diluted_valuation,
+                total_volume,
+                high_24h,
+                low_24h,
+                price_change_24h,
+                price_change_percentage_24h,
+                market_cap_change_24h,
+                market_cap_change_percentage_24h,
+                circulating_supply,
+                total_supply,
+                max_supply,
+                ath,
+                ath_change_percentage,
+                ath_date,
+                roi,
+                last_updated
+            });
+
+            console.log('Datos de Leotoken actualizados correctamente.');
+        } else {
+            console.error('La respuesta de la API de CoinGecko está vacía o no contiene datos para Leotoken.');
+        }
+    } catch (error) {
+        console.error(`Error al actualizar los datos de Leotoken: ${error.message}`);
+    }
+}
+
+module.exports = { updateLeotokenData };

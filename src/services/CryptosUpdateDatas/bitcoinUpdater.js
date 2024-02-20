@@ -16,7 +16,30 @@ async function updateBitcoinData() {
         if (response.data && response.data.length > 0) {
             const bitcoinData = response.data[0];
 
-            const { symbol, name, image, current_price, market_cap, market_cap_rank, fully_diluted_valuation, total_volume, high_24h, low_24h, price_change_24h, price_change_percentage_24h, market_cap_change_24h, market_cap_change_percentage_24h, circulating_supply, total_supply, max_supply, ath, ath_change_percentage, ath_date, roi, last_updated } = bitcoinData;
+            const {
+                symbol,
+                name,
+                image, 
+                current_price,
+                market_cap,
+                market_cap_rank,
+                fully_diluted_valuation,
+                total_volume,
+                high_24h,
+                low_24h,
+                price_change_24h,
+                price_change_percentage_24h,
+                market_cap_change_24h,
+                market_cap_change_percentage_24h,
+                circulating_supply,
+                total_supply,
+                max_supply,
+                ath,
+                ath_change_percentage,
+                ath_date,
+                roi,
+                last_updated
+            } = bitcoinData;
 
             await BITCOINcrypto.create({
                 symbol,

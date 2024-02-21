@@ -5,28 +5,13 @@ const { handleControllerError } = require('../../utils/errorHandling');
 async function fetchDataAndStoreInDatabase() {
     try {
         const response = await axios.get(`https://api.coingecko.com/api/v3/search/trending`);
-        const { name, symbol, thumb, small, large, market_cap_rank } = response.data.coins[0].item;
-        const { price, price_btc, market_cap, market_cap_btc, total_volume, total_volume_btc, sparkline } = response.data.coins[0].item.data;        
+        const coins = response.data.coins;
 
-        console.log('Datos obtenidos de la API:', {
-            name,
-            symbol,
-            thumb,
-            small,
-            large,
-            price,
-            price_btc,
-            market_cap,
-            market_cap_btc,
-            market_cap_rank,
-            total_volume,
-            total_volume_btc,
-            sparkline
-        });
+        for (const coinData of coins) {
+            const { name, symbol, thumb, small, large, market_cap_rank } = coinData.item;
+            const { price, price_btc, market_cap, market_cap_btc, total_volume, total_volume_btc, sparkline } = coinData.item.data;
 
-        let existingData = await CryptoMarketTrendingDatacrypto.findOne();
-        if (existingData) {
-            await existingData.update({
+            console.log('Datos obtenidos de la API:', {
                 name,
                 symbol,
                 thumb,
@@ -41,8 +26,7 @@ async function fetchDataAndStoreInDatabase() {
                 total_volume_btc,
                 sparkline
             });
-            console.log('Crypto Market Trending data updated successfully.');
-        } else {
+
             await CryptoMarketTrendingDatacrypto.create({
                 name,
                 symbol,
@@ -58,13 +42,15 @@ async function fetchDataAndStoreInDatabase() {
                 total_volume_btc,
                 sparkline
             });
-            console.log('Crypto Market Trending data inserted successfully.');
         }
+
+        console.log('Crypto Market Trending data updated successfully.');
     } catch (error) {
         console.error('Error updating Crypto Market Trending data:', error.message);
         throw new Error('Error updating Crypto Market Trending data');
     }
 }
+
 
 exports.updateCryptoMarketTrendingData = async (req, res) => {
     try {
@@ -77,8 +63,8 @@ exports.updateCryptoMarketTrendingData = async (req, res) => {
 
 exports.getCryptoMarketTrendingData = async (req, res) => {
     try {
-        const cryptomarkettrendingdataData = await CryptoMarketTrendingDatacrypto.findOne();
-        if (!cryptomarkettrendingdataData) {
+        const cryptomarkettrendingdataData = await CryptoMarketTrendingDatacrypto.findAll();
+        if (!cryptomarkettrendingdataData || cryptomarkettrendingdataData.length === 0) {
             return res.status(404).json({ error: 'No se encontraron datos para Crypto Market Trending Data' });
         }
         res.json(cryptomarkettrendingdataData);

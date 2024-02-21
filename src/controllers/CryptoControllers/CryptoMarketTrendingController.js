@@ -24,29 +24,47 @@ async function fetchDataAndStoreInDatabase() {
             sparkline
         });
 
-        await CryptoMarketTrendingDatacrypto.upsert({
-            name,
-            symbol,
-            thumb,
-            small,
-            large,
-            price,
-            price_btc,
-            market_cap,
-            market_cap_btc,
-            market_cap_rank,
-            total_volume,
-            total_volume_btc,
-            sparkline
-        });
-
-        console.log('Crypto Market Trending data updated successfully.');
+        let existingData = await CryptoMarketTrendingDatacrypto.findOne();
+        if (existingData) {
+            await existingData.update({
+                name,
+                symbol,
+                thumb,
+                small,
+                large,
+                price,
+                price_btc,
+                market_cap,
+                market_cap_btc,
+                market_cap_rank,
+                total_volume,
+                total_volume_btc,
+                sparkline
+            });
+            console.log('Crypto Market Trending data updated successfully.');
+        } else {
+            await CryptoMarketTrendingDatacrypto.create({
+                name,
+                symbol,
+                thumb,
+                small,
+                large,
+                price,
+                price_btc,
+                market_cap,
+                market_cap_btc,
+                market_cap_rank,
+                total_volume,
+                total_volume_btc,
+                sparkline
+            });
+            console.log('Crypto Market Trending data inserted successfully.');
+        }
     } catch (error) {
         console.error('Error updating Crypto Market Trending data:', error.message);
         throw new Error('Error updating Crypto Market Trending data');
     }
 }
-
 
 exports.updateCryptoMarketTrendingData = async (req, res) => {
     try {

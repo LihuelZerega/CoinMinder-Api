@@ -4,8 +4,8 @@ const axios = require('axios');
 async function fetchDataAndStoreInDatabase() {
     try {
         const response = await axios.get(`https://api.coingecko.com/api/v3/global`);
-        const { active_cryptocurrencies, upcoming_icos, ongoing_icos, ended_icos, markets, total_market_cap, total_volume, market_cap_percentage, market_cap_change_percentage_24h_usd, updated_at } = response.data;
-
+        const { data } = response.data;
+        const { active_cryptocurrencies, upcoming_icos, ongoing_icos, ended_icos, markets, total_market_cap, total_volume, market_cap_percentage, market_cap_change_percentage_24h_usd, updated_at } = data;
         console.log('Datos obtenidos de la API:', {
             active_cryptocurrencies,
             upcoming_icos,
@@ -19,7 +19,18 @@ async function fetchDataAndStoreInDatabase() {
             updated_at
         });
 
-        if (active_cryptocurrencies === null || upcoming_icos === null || ongoing_icos === null || ended_icos === null || markets === null || total_market_cap === null || total_volume === null || market_cap_percentage === null || market_cap_change_percentage_24h_usd === null || updated_at === null) {
+        if (
+            active_cryptocurrencies === null || 
+            upcoming_icos === null || 
+            ongoing_icos === null || 
+            ended_icos === null || 
+            markets === null || 
+            total_market_cap === null || 
+            total_volume === null || 
+            market_cap_percentage === null || 
+            market_cap_change_percentage_24h_usd === null || 
+            updated_at === null
+        ) {
             throw new Error('Los datos obtenidos de la API son nulos o incompletos');
         }
 
@@ -46,7 +57,6 @@ async function fetchDataAndStoreInDatabase() {
         throw new Error('Error updating Crypto Market data');
     }
 }
-
 
 exports.updateCryptoMarketData = async (req, res) => {
     try {

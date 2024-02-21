@@ -47,7 +47,5 @@ module.exports = (sequelize) => {
         tableName: 'cryptomarketdatas'
     });
 
-    console.log("Datos recibidos de la API:", data);
-
     return CryptoMarketData;
 };

@@ -66,6 +66,7 @@ const cors = require('cors');
 
 // Crypto Market Data Import
 const CryptoMarketRoutes = require('./routes/Crypto/CryptoMarketDataRoute')
+const CryptoMarketTrendingRoutes = require('./routes/Crypto/CryptoMarketTrendingRoute')
 
 const app = express();
 
@@ -147,6 +148,7 @@ app.use(express.json());
 // app.use('/api/crypto/usdc', UsdcRoutes);
 // app.use('/api/crypto/wrapped-bitcoin', WrappedBitcoinRoutes);
 app.use('/api/crypto/market', CryptoMarketRoutes);
+app.use('/api/crypto/market/trending', CryptoMarketTrendingRoutes);
 
 
 app.use((err, req, res, next) => {

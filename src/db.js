@@ -77,7 +77,9 @@ sequelize
 
 // Crypto Market Data
 const CryptoMarketDataModel = require("./models/CryptoMarketData/CryptoMarketData");
+const CryptoMarketTrendingDataModel = require("./models/CryptoMarketData/CryptoMarketTrending");
 const CryptoMarketDatacrypto = CryptoMarketDataModel(sequelize);
+const CryptoMarketTrendingDatacrypto = CryptoMarketTrendingDataModel(sequelize);
 
 //Stocks
 // const AapStockModel = require("./models/StocksModels/AAP");
@@ -196,4 +198,5 @@ module.exports = {
   // USDCcrypto,
   // WRAPPEDBITCOINcrypto,
   CryptoMarketDatacrypto,
+  CryptoMarketTrendingDatacrypto
 };

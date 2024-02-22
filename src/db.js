@@ -23,7 +23,7 @@ sequelize
 
 
 //Cryptos
-const CryptoCurrencyModel = require("./models/CryptoCurrenciesModels/Cryptocurrency");
+const CryptoCurrencyModel = require("./models/CryptoMarketData/Cryptocurrency");
 const CryptoMarketDataModel = require("./models/CryptoMarketData/CryptoMarketData");
 const CryptoMarketTrendingDataModel = require("./models/CryptoMarketData/CryptoMarketTrending");
 const CryptoCurrencycrypto = CryptoCurrencyModel(sequelize);

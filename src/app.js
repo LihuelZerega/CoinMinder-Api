@@ -38,35 +38,7 @@ const vzRoutes = require('./routes/Stocks/vzRoute');
 const wmtRoutes = require('./routes/Stocks/wmtRoute');
 
 //Cryptos Imports
-const { startCryptoUpdates } = require('./services/CryptosUpdateDatas/cryptoUpdater');
-const CryptoRoutesRoutes = require('./routes/Crypto/cryptoRoutes');
-const AvalancheRoutes = require('./routes/Crypto/AvalancheRoute')
-const BinanceBitcoinRoutes = require('./routes/Crypto/BinanceBitcoinRoute')
-const BitcoinRoutes = require('./routes/Crypto/BitcoinRoute')
-const BitcoinCashRoutes = require('./routes/Crypto/BitcoinCashRoute')
-const CardanoRoutes = require('./routes/Crypto/CardanoRoute')
-const ChainLinkRoutes = require('./routes/Crypto/ChainLinkRoute')
-const CosmosHubRoutes = require('./routes/Crypto/CosmosHubRoute')
-const DaiRoutes = require('./routes/Crypto/DaiRoute')
-const DogeCoinRoutes = require('./routes/Crypto/DogeCoinRoute')
-const EthereumRoutes = require('./routes/Crypto/EthereumRoute')
-const InternetComputerRoutes = require('./routes/Crypto/InternetComputerRoute')
-const LeoTokenRoutes = require('./routes/Crypto/LeoTokenRoute')
-const LidoStakedEtherRoutes = require('./routes/Crypto/LidoStakedEtherRoute')
-const LiteCoinRoutes = require('./routes/Crypto/LiteCoinRoute')
-const PolkadotRoutes = require('./routes/Crypto/PolkadotRoute')
-const PolygonRoutes = require('./routes/Crypto/PolygonRoute')
-const RippleRoutes = require('./routes/Crypto/RippleRoute')
-const ShibaInuRoutes = require('./routes/Crypto/ShibaInuRoute')
-const SolanaRoutes = require('./routes/Crypto/SolanaRoute')
-const TetherRoutes = require('./routes/Crypto/TetherRoute')
-const ToincoinRoutes = require('./routes/Crypto/ToincoinRoute')
-const TronRoutes = require('./routes/Crypto/TronRoute')
-const UniSwapRoutes = require('./routes/Crypto/UniSwapRoute')
-const UsdcRoutes = require('./routes/Crypto/UsdcRoute')
-const WrappedBitcoinRoutes = require('./routes/Crypto/WrappedBitcoinRoute')
-
-// Crypto Market Data Import
+const CryptoCurrencyRoutes = require ('./routes/Crypto/CryptoCurrencyRoute')
 const CryptoMarketRoutes = require('./routes/Crypto/CryptoMarketDataRoute')
 const CryptoMarketTrendingRoutes = require('./routes/Crypto/CryptoMarketTrendingRoute')
 
@@ -124,36 +96,11 @@ app.use('/api/stock/vz', vzRoutes);
 app.use('/api/stock/wmt', wmtRoutes);
 
 // Cryptos endpoints
-app.use('/api/crypto', CryptoRoutesRoutes);
-app.use('/api/crypto/avalanche', AvalancheRoutes);
-app.use('/api/crypto/binance-bitcoin', BinanceBitcoinRoutes);
-app.use('/api/crypto/bitcoin', BitcoinRoutes);
-app.use('/api/crypto/bitcoin-cash', BitcoinCashRoutes);
-app.use('/api/crypto/cardano', CardanoRoutes);
-app.use('/api/crypto/chainlink', ChainLinkRoutes);
-app.use('/api/crypto/cosmos-hub', CosmosHubRoutes);
-app.use('/api/crypto/dai', DaiRoutes);
-app.use('/api/crypto/dogecoin', DogeCoinRoutes);
-app.use('/api/crypto/ethereum', EthereumRoutes);
-app.use('/api/crypto/internet-computer', InternetComputerRoutes);
-app.use('/api/crypto/leo-token', LeoTokenRoutes);
-app.use('/api/crypto/lido-staked-ether', LidoStakedEtherRoutes);
-app.use('/api/crypto/litecoin', LiteCoinRoutes);
-app.use('/api/crypto/polkadot', PolkadotRoutes);
-app.use('/api/crypto/polygon', PolygonRoutes);
-app.use('/api/crypto/ripple', RippleRoutes);
-app.use('/api/crypto/shiba-inu', ShibaInuRoutes);
-app.use('/api/crypto/solana', SolanaRoutes);
-app.use('/api/crypto/tether', TetherRoutes);
-app.use('/api/crypto/toincoin', ToincoinRoutes);
-app.use('/api/crypto/tron', TronRoutes);
-app.use('/api/crypto/uniswap', UniSwapRoutes);
-app.use('/api/crypto/usdc', UsdcRoutes);
-app.use('/api/crypto/wrapped-bitcoin', WrappedBitcoinRoutes);
+app.use('/api/crypto', CryptoCurrencyRoutes)
 app.use('/api/crypto/market', CryptoMarketRoutes);
 app.use('/api/crypto/market/trending', CryptoMarketTrendingRoutes);
 
-startCryptoUpdates();
+// startCryptoUpdates();
 
 app.use((err, req, res, next) => {
   const status = err.status || 500;

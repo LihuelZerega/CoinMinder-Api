@@ -23,61 +23,10 @@ sequelize
 
 
 //Cryptos
-const AvalancheCryptoModel = require("./models/CryptoCurrenciesModels/Avalanche");
-const BinanceBitcoinCryptoModel = require("./models/CryptoCurrenciesModels/BinanceBitcoin");
-const BitcoinCryptoModel = require("./models/CryptoCurrenciesModels/Bitcoin");
-const BitcoinCashCryptoModel = require("./models/CryptoCurrenciesModels/BitcoinCash");
-const CardanoCryptoModel = require("./models/CryptoCurrenciesModels/Cardano");
-const ChainLinkCryptoModel = require("./models/CryptoCurrenciesModels/ChainLink");
-const CosmosHubCryptoModel = require("./models/CryptoCurrenciesModels/CosmosHub");
-const DaiCryptoModel = require("./models/CryptoCurrenciesModels/Dai");
-const DogeCoinCryptoModel = require("./models/CryptoCurrenciesModels/DogeCoin");
-const EthereumCryptoModel = require("./models/CryptoCurrenciesModels/Ethereum");
-const InternetComputerCryptoModel = require("./models/CryptoCurrenciesModels/InternetComputer");
-const LeoTokenCryptoModel = require("./models/CryptoCurrenciesModels/LeoToken");
-const LidoStakedEtherCryptoModel = require("./models/CryptoCurrenciesModels/LidoStakedEther");
-const LiteCoinCryptoModel = require("./models/CryptoCurrenciesModels/LiteCoin");
-const PolkadotCryptoModel = require("./models/CryptoCurrenciesModels/Polkadot");
-const PolygonCryptoModel = require("./models/CryptoCurrenciesModels/Polygon");
-const RippleCryptoModel = require("./models/CryptoCurrenciesModels/Ripple");
-const ShibaInuCryptoModel = require("./models/CryptoCurrenciesModels/ShibaInu");
-const SolanaCryptoModel = require("./models/CryptoCurrenciesModels/Solana");
-const TetherCryptoModel = require("./models/CryptoCurrenciesModels/Tether");  
-const ToincoinCryptoModel = require("./models/CryptoCurrenciesModels/Toincoin");
-const TronCryptoModel = require("./models/CryptoCurrenciesModels/Tron");
-const UniSwapCryptoModel = require("./models/CryptoCurrenciesModels/UniSwap");
-const UsdcCryptoModel = require("./models/CryptoCurrenciesModels/Usdc");
-const WrappedBitcoinCryptoModel = require("./models/CryptoCurrenciesModels/WrappedBitcoin");
-
-const AVALANCHEcrypto = AvalancheCryptoModel(sequelize);
-const BINANCEBITCOINcrypto = BinanceBitcoinCryptoModel(sequelize);
-const BITCOINcrypto = BitcoinCryptoModel(sequelize);
-const BITCOINCASHcrypto = BitcoinCashCryptoModel(sequelize);
-const CARDANOcrypto = CardanoCryptoModel(sequelize);
-const CHAINLINKcrypto = ChainLinkCryptoModel(sequelize);
-const COSMOSHUBcrypto = CosmosHubCryptoModel(sequelize);
-const DAIcrypto = DaiCryptoModel(sequelize);
-const DOGECOINcrypto = DogeCoinCryptoModel(sequelize);
-const ETHEREUMcrypto = EthereumCryptoModel(sequelize);
-const INTERNETCOMPUTERcrypto = InternetComputerCryptoModel(sequelize);
-const LEOTOKENcrypto = LeoTokenCryptoModel(sequelize);
-const LIDOSTAKEDcrypto = LidoStakedEtherCryptoModel(sequelize);
-const LITECOINcrypto = LiteCoinCryptoModel(sequelize);
-const POLKADOTcrypto = PolkadotCryptoModel(sequelize);
-const POLYGONcrypto = PolygonCryptoModel(sequelize);
-const RIPPLEcrypto = RippleCryptoModel(sequelize);
-const SHIBAINUcrypto = ShibaInuCryptoModel(sequelize);
-const SOLANAcrypto = SolanaCryptoModel(sequelize);
-const TETHERcrypto = TetherCryptoModel(sequelize);
-const TOINCOINcrypto = ToincoinCryptoModel(sequelize);
-const TRONcrypto = TronCryptoModel(sequelize);
-const UNISWAPcrypto = UniSwapCryptoModel(sequelize);
-const USDCcrypto = UsdcCryptoModel(sequelize);
-const WRAPPEDBITCOINcrypto = WrappedBitcoinCryptoModel(sequelize);
-
-// Crypto Market Data
+const CryptoCurrencyModel = require("./models/CryptoCurrenciesModels/Cryptocurrency");
 const CryptoMarketDataModel = require("./models/CryptoMarketData/CryptoMarketData");
 const CryptoMarketTrendingDataModel = require("./models/CryptoMarketData/CryptoMarketTrending");
+const CryptoCurrencycrypto = CryptoCurrencyModel(sequelize);
 const CryptoMarketDatacrypto = CryptoMarketDataModel(sequelize);
 const CryptoMarketTrendingDatacrypto = CryptoMarketTrendingDataModel(sequelize);
 
@@ -172,31 +121,7 @@ module.exports = {
   TSLAstock,
   VZstock,
   WMTstock,
-  AVALANCHEcrypto,
-  BINANCEBITCOINcrypto,
-  BITCOINcrypto,
-  BITCOINCASHcrypto,
-  CARDANOcrypto,
-  CHAINLINKcrypto,
-  COSMOSHUBcrypto,
-  DAIcrypto,
-  DOGECOINcrypto,
-  ETHEREUMcrypto,
-  INTERNETCOMPUTERcrypto,
-  LEOTOKENcrypto,
-  LIDOSTAKEDcrypto,
-  LITECOINcrypto,
-  POLKADOTcrypto,
-  POLYGONcrypto,
-  RIPPLEcrypto,
-  SHIBAINUcrypto,
-  SOLANAcrypto,
-  TETHERcrypto,
-  TOINCOINcrypto,
-  TRONcrypto,
-  UNISWAPcrypto,
-  USDCcrypto,
-  WRAPPEDBITCOINcrypto,
+  CryptoCurrencycrypto,
   CryptoMarketDatacrypto,
   CryptoMarketTrendingDatacrypto
 };

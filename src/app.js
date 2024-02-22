@@ -38,6 +38,7 @@ const vzRoutes = require('./routes/Stocks/vzRoute');
 const wmtRoutes = require('./routes/Stocks/wmtRoute');
 
 //Cryptos Imports
+const CryptoRoutesRoutes = require('./routes/Crypto/cryptoRoutes');
 const AvalancheRoutes = require('./routes/Crypto/AvalancheRoute')
 const BinanceBitcoinRoutes = require('./routes/Crypto/BinanceBitcoinRoute')
 const BitcoinRoutes = require('./routes/Crypto/BitcoinRoute')
@@ -122,6 +123,7 @@ app.use('/api/stock/vz', vzRoutes);
 app.use('/api/stock/wmt', wmtRoutes);
 
 // Cryptos endpoints
+app.use('/api/crypto', CryptoRoutesRoutes);
 app.use('/api/crypto/avalanche', AvalancheRoutes);
 app.use('/api/crypto/binance-bitcoin', BinanceBitcoinRoutes);
 app.use('/api/crypto/bitcoin', BitcoinRoutes);

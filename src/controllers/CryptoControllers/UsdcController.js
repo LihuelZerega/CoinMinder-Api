@@ -1,10 +1,7 @@
 const { USDCcrypto } = require('../../db');
-const { updateUsdcData } = require('../../services/CryptosUpdateDatas/updateUSDCData');
 
 exports.getUSDC = async (req, res) => {
     try {
-        await updateUsdcData();
-
         let usdcData = await USDCcrypto.findOne();
 
         res.json(usdcData);

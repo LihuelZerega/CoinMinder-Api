@@ -1,9 +1,7 @@
 const { DAIcrypto } = require('../../db');
-const { updateDaiData } = require('../../services/CryptosUpdateDatas/updateDAIData');
 
 exports.getDAI = async (req, res) => {
     try {
-        await updateDaiData();
 
         let daiData = await DAIcrypto.findOne();
 

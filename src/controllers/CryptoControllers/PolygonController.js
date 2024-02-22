@@ -1,9 +1,7 @@
 const { POLYGONcrypto } = require('../../db');
-const { updatePolygonData } = require('../../services/CryptosUpdateDatas/updatePOLYGONData');
 
 exports.getPOLYGON = async (req, res) => {
     try {
-        await updatePolygonData();
 
         let polygonData = await POLYGONcrypto.findOne();
 

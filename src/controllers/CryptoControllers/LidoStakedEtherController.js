@@ -1,9 +1,7 @@
 const { LIDOSTAKEDcrypto } = require('../../db');
-const { updateLidostackedetherData } = require('../../services/CryptosUpdateDatas/updateLIDOSTAKEDETHERData');
 
 exports.getLIDOSTAKED = async (req, res) => {
     try {
-        await updateLidostackedetherData();
 
         let lidostakedetherData = await LIDOSTAKEDcrypto.findOne();
 

@@ -1,9 +1,7 @@
 const { AVALANCHEcrypto } = require('../../db');
-const { updateAvalancheData } = require('../../services/CryptosUpdateDatas/avalancheUpdater');
 
 exports.getAVALANCHE = async (req, res) => {
     try {
-        await updateAvalancheData();
 
         let avalancheData = await AVALANCHEcrypto.findOne();
 

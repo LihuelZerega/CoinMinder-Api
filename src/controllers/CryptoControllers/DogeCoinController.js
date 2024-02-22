@@ -1,9 +1,7 @@
 const { DOGECOINcrypto } = require('../../db');
-const { updateDogecoinData } = require('../../services/CryptosUpdateDatas/updateDOGECOINData');
 
 exports.getDOGECOIN = async (req, res) => {
     try {
-        await updateDogecoinData();
 
         let dogecoinData = await DOGECOINcrypto.findOne();
 

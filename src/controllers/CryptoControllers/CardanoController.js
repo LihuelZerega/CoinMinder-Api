@@ -1,9 +1,7 @@
 const { CARDANOcrypto } = require('../../db');
-const { updateCardanoData } = require('../../services/CryptosUpdateDatas/updateCARDANOData');
 
 exports.getCARDANO = async (req, res) => {
     try {
-        await updateCardanoData();
 
         let cardanoData = await CARDANOcrypto.findOne();
 

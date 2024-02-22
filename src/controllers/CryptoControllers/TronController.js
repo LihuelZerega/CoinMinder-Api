@@ -1,9 +1,7 @@
 const { TRONcrypto } = require('../../db');
-const { updateTronData } = require('../../services/CryptosUpdateDatas/updateTRONData');
 
 exports.getTRON = async (req, res) => {
     try {
-        await updateTronData();
 
         let tronData = await TRONcrypto.findOne();
 

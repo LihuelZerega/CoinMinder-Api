@@ -1,9 +1,7 @@
 const { TOINCOINcrypto } = require('../../db');
-const { updateToincoinData } = require('../../services/CryptosUpdateDatas/updateTOINCOINData');
 
 exports.getTOINCOIN = async (req, res) => {
     try {
-        await updateToincoinData();
 
         let toincoinData = await TOINCOINcrypto.findOne();
 

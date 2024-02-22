@@ -1,9 +1,7 @@
 const { BITCOINCASHcrypto } = require('../../db');
-const { updateBitcoincashData } = require('../../services/CryptosUpdateDatas/bitcoincashUpdater');
 
 exports.getBITCOINCASH = async (req, res) => {
     try {
-        await updateBitcoincashData();
 
         let bitcoincashData = await BITCOINCASHcrypto.findOne();
 

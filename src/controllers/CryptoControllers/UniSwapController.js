@@ -1,9 +1,7 @@
 const { UNISWAPcrypto } = require('../../db');
-const { updateUniswapData } = require('../../services/CryptosUpdateDatas/updateUNISWAPData');
 
 exports.getUNISWAP = async (req, res) => {
     try {
-        await updateUniswapData();
 
         let uniswapData = await UNISWAPcrypto.findOne();
 

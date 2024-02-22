@@ -38,6 +38,7 @@ const vzRoutes = require('./routes/Stocks/vzRoute');
 const wmtRoutes = require('./routes/Stocks/wmtRoute');
 
 //Cryptos Imports
+const { startCryptoUpdates } = require('./services/CryptosUpdateDatas/cryptoUpdater');
 const CryptoRoutesRoutes = require('./routes/Crypto/cryptoRoutes');
 const AvalancheRoutes = require('./routes/Crypto/AvalancheRoute')
 const BinanceBitcoinRoutes = require('./routes/Crypto/BinanceBitcoinRoute')
@@ -152,6 +153,7 @@ app.use('/api/crypto/wrapped-bitcoin', WrappedBitcoinRoutes);
 app.use('/api/crypto/market', CryptoMarketRoutes);
 app.use('/api/crypto/market/trending', CryptoMarketTrendingRoutes);
 
+startCryptoUpdates();
 
 app.use((err, req, res, next) => {
   const status = err.status || 500;

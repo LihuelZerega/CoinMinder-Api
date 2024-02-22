@@ -1,10 +1,7 @@
 const { WRAPPEDBITCOINcrypto } = require('../../db');
-const { updateWrappedbitcoinData } = require('../../services/CryptosUpdateDatas/updateWRAPPEDBITCOINData');
 
 exports.getWRAPPEDBITCOIN = async (req, res) => {
     try {
-        await updateWrappedbitcoinData();
-
         let wreappedbitcoinData = await WRAPPEDBITCOINcrypto.findOne();
 
         res.json(wreappedbitcoinData);

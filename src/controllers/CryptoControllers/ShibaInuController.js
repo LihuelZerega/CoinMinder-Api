@@ -1,9 +1,7 @@
 const { SHIBAINUcrypto } = require('../../db');
-const { updateShibainuData } = require('../../services/CryptosUpdateDatas/updateSHIBAINUData');
 
 exports.getSHIBAINU = async (req, res) => {
     try {
-        await updateShibainuData();
 
         let shibainuData = await SHIBAINUcrypto.findOne();
 

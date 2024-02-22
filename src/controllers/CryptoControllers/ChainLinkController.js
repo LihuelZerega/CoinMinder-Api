@@ -1,9 +1,7 @@
 const { CHAINLINKcrypto } = require('../../db');
-const { updateChainlinkData } = require('../../services/CryptosUpdateDatas/updateCHAINLINKData');
 
 exports.getCHAINLINK = async (req, res) => {
     try {
-        await updateChainlinkData();
 
         let chainlinkData = await CHAINLINKcrypto.findOne();
 

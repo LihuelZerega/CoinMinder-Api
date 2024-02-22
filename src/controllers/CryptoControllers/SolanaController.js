@@ -1,9 +1,7 @@
 const { SOLANAcrypto } = require('../../db');
-const { updateSolanaData } = require('../../services/CryptosUpdateDatas/updateSOLANAData');
 
 exports.getSOLANA = async (req, res) => {
     try {
-        await updateSolanaData();
 
         let solanaData = await SOLANAcrypto.findOne();
 

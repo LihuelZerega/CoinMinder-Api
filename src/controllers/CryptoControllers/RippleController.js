@@ -1,9 +1,7 @@
 const { RIPPLEcrypto } = require('../../db');
-const { updateRippleData } = require('../../services/CryptosUpdateDatas/updateRIPPLEData');
 
 exports.getRIPPLE = async (req, res) => {
     try {
-        await updateRippleData();
 
         let rippleData = await RIPPLEcrypto.findOne();
 

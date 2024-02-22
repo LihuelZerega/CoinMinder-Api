@@ -1,9 +1,7 @@
 const { INTERNETCOMPUTERcrypto } = require('../../db');
-const { updateInternetcomputerData } = require('../../services/CryptosUpdateDatas/updateINTERNETCOMPUTERData');
 
 exports.getINTERNETCOMPUTER = async (req, res) => {
     try {
-        await updateInternetcomputerData();
 
         let internetcomputerData = await INTERNETCOMPUTERcrypto.findOne();
 

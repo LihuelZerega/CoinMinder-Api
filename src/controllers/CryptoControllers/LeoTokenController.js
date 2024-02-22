@@ -1,9 +1,7 @@
 const { LEOTOKENcrypto } = require('../../db');
-const { updateLeotokenData } = require('../../services/CryptosUpdateDatas/updateLEOTOKENData');
 
 exports.getLEOTOKEN = async (req, res) => {
     try {
-        await updateLeotokenData();
 
         let leotokenData = await LEOTOKENcrypto.findOne();
 

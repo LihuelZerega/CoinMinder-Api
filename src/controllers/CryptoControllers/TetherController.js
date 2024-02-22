@@ -1,9 +1,7 @@
 const { TETHERcrypto } = require('../../db');
-const { updateTetherData } = require('../../services/CryptosUpdateDatas/updateTETHERData');
 
 exports.getTETHER = async (req, res) => {
     try {
-        await updateTetherData();
 
         let tetherData = await TETHERcrypto.findOne();
 

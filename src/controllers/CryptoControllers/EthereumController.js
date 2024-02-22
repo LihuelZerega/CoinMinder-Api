@@ -1,9 +1,7 @@
 const { ETHEREUMcrypto } = require('../../db');
-const { updateEthereumData } = require('../../services/CryptosUpdateDatas/updateETHEREUMData');
 
 exports.getETHEREUM = async (req, res) => {
     try {
-        await updateEthereumData();
 
         let ethereumData = await ETHEREUMcrypto.findOne();
 

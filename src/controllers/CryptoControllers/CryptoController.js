@@ -23,61 +23,8 @@ const { AVALANCHEcrypto,
         WRAPPEDBITCOINcrypto
     } = require('../../db');
 
-const { updateAvalancheData } = require('../../services/CryptosUpdateDatas/avalancheUpdater');
-const { updateBinancebitcoinData } = require('../../services/CryptosUpdateDatas/binancebitcoinUpdater');
-const { updateBitcoinData } = require('../../services/CryptosUpdateDatas/bitcoinUpdater');
-const { updateBitcoincashData } = require('../../services/CryptosUpdateDatas/bitcoincashUpdater');
-const { updateCardanoData } = require('../../services/CryptosUpdateDatas/updateCARDANOData');
-const { updateChainlinkData } = require('../../services/CryptosUpdateDatas/updateCHAINLINKData');
-const { updateCosmoshubData } = require('../../services/CryptosUpdateDatas/updateCOSMOSHUBData');
-const { updateDaiData } = require('../../services/CryptosUpdateDatas/updateDAIData');
-const { updateDogecoinData } = require('../../services/CryptosUpdateDatas/updateDOGECOINData');
-const { updateEthereumData } = require('../../services/CryptosUpdateDatas/updateETHEREUMData');
-const { updateInternetcomputerData } = require('../../services/CryptosUpdateDatas/updateINTERNETCOMPUTERData');
-const { updateLeotokenData } = require('../../services/CryptosUpdateDatas/updateLEOTOKENData');
-const { updateLidostackedetherData } = require('../../services/CryptosUpdateDatas/updateLIDOSTAKEDETHERData');
-const { updateLitecoinData } = require('../../services/CryptosUpdateDatas/updateLITECOINData');
-const { updatePolkadotData } = require('../../services/CryptosUpdateDatas/updatePOLKADOTData');
-const { updatePolygonData } = require('../../services/CryptosUpdateDatas/updatePOLYGONData');
-const { updateRippleData } = require('../../services/CryptosUpdateDatas/updateRIPPLEData');
-const { updateShibainuData } = require('../../services/CryptosUpdateDatas/updateSHIBAINUData');
-const { updateSolanaData } = require('../../services/CryptosUpdateDatas/updateSOLANAData');
-const { updateTetherData } = require('../../services/CryptosUpdateDatas/updateTETHERData');
-const { updateToincoinData } = require('../../services/CryptosUpdateDatas/updateTOINCOINData');
-const { updateTronData } = require('../../services/CryptosUpdateDatas/updateTRONData');
-const { updateUniswapData } = require('../../services/CryptosUpdateDatas/updateUNISWAPData');
-const { updateUsdcData } = require('../../services/CryptosUpdateDatas/updateUSDCData');
-const { updateWrappedbitcoinData } = require('../../services/CryptosUpdateDatas/updateWRAPPEDBITCOINData');
-
-
 exports.getCRYPTO = async (req, res) => {
     try {
-        await updateAvalancheData();
-        await updateBinancebitcoinData();
-        await updateBitcoinData();
-        await updateBitcoincashData();
-        await updateCardanoData();
-        await updateChainlinkData();
-        await updateCosmoshubData();
-        await updateDaiData();
-        await updateDogecoinData();
-        await updateEthereumData();
-        await updateInternetcomputerData();
-        await updateLeotokenData();
-        await updateLidostackedetherData();
-        await updateLitecoinData();
-        await updatePolkadotData();
-        await updatePolygonData();
-        await updateRippleData();
-        await updateShibainuData();
-        await updateSolanaData();
-        await updateTetherData();
-        await updateToincoinData();
-        await updateTronData();
-        await updateUniswapData();
-        await updateUsdcData();
-        await updateWrappedbitcoinData();
-
         let avalancheData = await AVALANCHEcrypto.findOne();
         let binancebitcoinData = await BINANCEBITCOINcrypto.findOne();
         let bitcoinData = await BITCOINcrypto.findOne();

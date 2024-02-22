@@ -73,7 +73,7 @@ async function getTopGainers(req, res) {
     try {
         const topGainers = await CryptoCurrencycrypto.findAll({
             order: [['price_change_percentage_24h', 'DESC']],
-            limit: 3,
+            limit: 9,
         });
         res.json(topGainers);
     } catch (error) {
@@ -86,7 +86,7 @@ async function getTopLosers(req, res) {
     try {
         const topLosers = await CryptoCurrencycrypto.findAll({
             order: [['price_change_percentage_24h', 'ASC']],
-            limit: 3,
+            limit: 9,
         });
         res.json(topLosers);
     } catch (error) {

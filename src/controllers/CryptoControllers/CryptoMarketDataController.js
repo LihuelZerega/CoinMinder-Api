@@ -1,8 +1,10 @@
-const { CryptoMarketDatacrypto } = require('../../db');
 const axios = require('axios');
+const { CryptoMarketDatacrypto, sequelize } = require('../../db');
 
 async function fetchDataAndStoreInDatabase() {
     try {
+        await CryptoMarketDatacrypto.destroy({ truncate: true });
+
         const response = await axios.get(`https://api.coingecko.com/api/v3/global`);
         const { data } = response.data;
         const { active_cryptocurrencies, upcoming_icos, ongoing_icos, ended_icos, markets, total_market_cap, total_volume, market_cap_percentage, market_cap_change_percentage_24h_usd, updated_at } = data;
@@ -38,7 +40,7 @@ async function fetchDataAndStoreInDatabase() {
         const serializedTotalVolume = JSON.stringify(total_volume);
         const serializedMarketCapPercentage = JSON.stringify(market_cap_percentage);
 
-        await CryptoMarketDatacrypto.upsert({
+        await CryptoMarketDatacrypto.create({
             active_cryptocurrencies,
             upcoming_icos,
             ongoing_icos,

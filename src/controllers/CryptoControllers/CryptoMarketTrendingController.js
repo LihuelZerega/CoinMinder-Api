@@ -4,6 +4,8 @@ const { handleControllerError } = require('../../utils/errorHandling');
 
 async function fetchDataAndStoreInDatabase() {
     try {
+        await CryptoMarketTrendingDatacrypto.destroy({ truncate: true });
+
         const response = await axios.get(`https://api.coingecko.com/api/v3/search/trending`);
         const coins = response.data.coins;
 

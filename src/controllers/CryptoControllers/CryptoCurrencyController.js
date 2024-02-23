@@ -42,6 +42,9 @@ async function updateCryptocurrencies(req, res) {
                     ath: cryptoData.ath,
                     ath_change_percentage: cryptoData.ath_change_percentage,
                     ath_date: cryptoData.ath_date,
+                    atl: cryptoData.atl,
+                    atl_change_percentage: cryptoData.atl_change_percentage,
+                    atl_date: cryptoData.atl_date,
                     roi: cryptoData.roi,
                     last_updated: cryptoData.last_updated
                 };

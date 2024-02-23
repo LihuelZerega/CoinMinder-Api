@@ -69,6 +69,24 @@ async function getCryptocurrencies(req, res) {
     }
 }
 
+async function getCurrencyById(req, res) {
+    const { id } = req.params;
+
+    try {
+        const currency = await CryptoCurrencycrypto.findByPk(id);
+
+        if (!currency) {
+            return res.status(404).json({ error: 'Criptomoneda no encontrada' });
+        }
+
+        res.status(200).json(currency);
+    } catch (error) {
+        console.error('Error al obtener la criptomoneda por ID:', error);
+        res.status(500).json({ error: 'Error interno del servidor' });
+    }
+}
+
+
 async function getTopGainers(req, res) {
     try {
         const topGainers = await CryptoCurrencycrypto.findAll({
@@ -95,4 +113,4 @@ async function getTopLosers(req, res) {
     }
 }
 
-module.exports = { updateCryptocurrencies, getCryptocurrencies, getTopGainers, getTopLosers };
+module.exports = { updateCryptocurrencies, getCryptocurrencies, getCurrencyById, getTopGainers, getTopLosers };

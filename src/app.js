@@ -100,8 +100,6 @@ app.use('/api/crypto', CryptoCurrencyRoutes)
 app.use('/api/crypto/market', CryptoMarketRoutes);
 app.use('/api/crypto/market/trending', CryptoMarketTrendingRoutes);
 
-// startCryptoUpdates();
-
 app.use((err, req, res, next) => {
   const status = err.status || 500;
   const message = err.message || err;

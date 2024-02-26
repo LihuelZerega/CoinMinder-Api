@@ -41,6 +41,12 @@ const wmtRoutes = require('./routes/Stocks/wmtRoute');
 const CryptoCurrencyRoutes = require ('./routes/Crypto/CryptoCurrencyRoute')
 const CryptoMarketRoutes = require('./routes/Crypto/CryptoMarketDataRoute')
 const CryptoMarketTrendingRoutes = require('./routes/Crypto/CryptoMarketTrendingRoute')
+const BitcoinChartRoutes = require('./routes/Crypto/CryptoChartsRoutes/BitcoinChartRoute')
+const EthereumChartRoutes = require('./routes/Crypto/CryptoChartsRoutes/EthereumChartRoute')
+const TetherChartRoutes = require('./routes/Crypto/CryptoChartsRoutes/TetherChartRoute')
+const BnbChartRoutes = require('./routes/Crypto/CryptoChartsRoutes/BnbChartRoute')
+const SolanaChartRoutes = require('./routes/Crypto/CryptoChartsRoutes/SolanaChartRoute')
+
 
 const app = express();
 
@@ -99,6 +105,12 @@ app.use('/api/stock/wmt', wmtRoutes);
 app.use('/api/crypto', CryptoCurrencyRoutes)
 app.use('/api/crypto/market', CryptoMarketRoutes);
 app.use('/api/crypto/market/trending', CryptoMarketTrendingRoutes);
+app.use('/api/crypto/bitcoin', BitcoinChartRoutes)
+app.use('/api/crypto/ethereum', EthereumChartRoutes)
+app.use('/api/crypto/tether', TetherChartRoutes)
+app.use('/api/crypto/bnb', BnbChartRoutes)
+app.use('/api/crypto/solana', SolanaChartRoutes)
+
 
 app.use((err, req, res, next) => {
   const status = err.status || 500;

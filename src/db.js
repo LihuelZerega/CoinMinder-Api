@@ -26,9 +26,21 @@ sequelize
 const CryptoCurrencyModel = require("./models/CryptoMarketData/Cryptocurrency");
 const CryptoMarketDataModel = require("./models/CryptoMarketData/CryptoMarketData");
 const CryptoMarketTrendingDataModel = require("./models/CryptoMarketData/CryptoMarketTrending");
+const BitcoinChartModel = require("./models/CryptoMarketData/CryptoCharts/BitcoinChart")
+const EthereumChartModel = require("./models/CryptoMarketData/CryptoCharts/EthereumChart")
+const TetherChartModel = require("./models/CryptoMarketData/CryptoCharts/TetherChart")
+const BnbChartModel = require("./models/CryptoMarketData/CryptoCharts/BnbChart")
+const SolanaChartModel = require("./models/CryptoMarketData/CryptoCharts/SolanaChart")
+
 const CryptoCurrencycrypto = CryptoCurrencyModel(sequelize);
 const CryptoMarketDatacrypto = CryptoMarketDataModel(sequelize);
 const CryptoMarketTrendingDatacrypto = CryptoMarketTrendingDataModel(sequelize);
+const CryptoBitcoinChart = BitcoinChartModel(sequelize);
+const CryptoEthereumChart = EthereumChartModel(sequelize);
+const CryptoTetherChart = TetherChartModel(sequelize);
+const CryptoBnbChart = BnbChartModel(sequelize);
+const CryptoSolanaChart = SolanaChartModel(sequelize);
+
 
 //Stocks
 const AapStockModel = require("./models/StocksModels/AAP");
@@ -123,5 +135,10 @@ module.exports = {
   WMTstock,
   CryptoCurrencycrypto,
   CryptoMarketDatacrypto,
-  CryptoMarketTrendingDatacrypto
+  CryptoMarketTrendingDatacrypto,
+  CryptoBitcoinChart,
+  CryptoEthereumChart,
+  CryptoTetherChart,
+  CryptoBnbChart,
+  CryptoSolanaChart,
 };

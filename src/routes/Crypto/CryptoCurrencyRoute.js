@@ -4,7 +4,7 @@ const CryptoController = require('../../controllers/CryptoControllers/CryptoCurr
 const cron = require('node-cron');
 const axios = require('axios');
 
-cron.schedule('*/30 * * * *', async () => {
+cron.schedule('*/12 * * * *', async () => {
     try {
       await axios.post('http://localhost:8080/api/crypto/');
       console.log('POST request successful');

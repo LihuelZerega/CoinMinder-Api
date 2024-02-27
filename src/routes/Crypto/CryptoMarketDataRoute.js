@@ -4,7 +4,7 @@ const CryptoMarketDataController = require('../../controllers/CryptoControllers/
 const cron = require('node-cron');
 const axios = require('axios');
 
-cron.schedule('*/12 * * * *', async () => {
+cron.schedule('*/30 * * * *', async () => {
     try {
       await axios.post('http://localhost:8080/api/crypto/market/update');
       console.log('POST request successful');

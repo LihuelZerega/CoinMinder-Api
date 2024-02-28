@@ -1,15 +1,19 @@
 const axios = require('axios');
 const { CryptoCurrencycrypto, sequelize } = require('../../db');
 
-async function updateCryptocurrencies(req, res) {
+async function deleteCryptocurrencies() {
     try {
-        const tableExists = await sequelize.getQueryInterface().showAllTables().then(tables => {
-            return tables.includes('CryptoCurrencycryptos');
-        });
+        await CryptoCurrencycrypto.destroy({ where: {} });
+        console.log('Datos de criptomonedas eliminados correctamente.');
+    } catch (error) {
+        console.error('Error al eliminar los datos de criptomonedas:', error);
+        throw error;
+    }
+}
 
-        if (tableExists) {
-            await CryptoCurrencycrypto.destroy({ truncate: true });
-        }
+async function updateCryptocurrencies() {
+    try {
+        await CryptoCurrencycrypto.destroy({ where: {} });
 
         const response = await axios.get('https://api.coingecko.com/api/v3/coins/markets', {
             params: {
@@ -53,12 +57,14 @@ async function updateCryptocurrencies(req, res) {
             await CryptoCurrencycrypto.bulkCreate(cryptocurrenciesData);
         }
 
-        res.status(200).json({ message: 'Datos de criptomonedas actualizados correctamente.' });
+        console.log('Datos de criptomonedas actualizados correctamente.');
     } catch (error) {
         console.error('Error al obtener los datos de criptomonedas:', error);
-        res.status(500).json({ error: 'Error interno del servidor' });
+        throw error;
     }
 }
+
+
 
 async function getCryptocurrencies(req, res) {
     try {
@@ -116,4 +122,4 @@ async function getTopLosers(req, res) {
     }
 }
 
-module.exports = { updateCryptocurrencies, getCryptocurrencies, getCurrencyById, getTopGainers, getTopLosers };
+module.exports = { deleteCryptocurrencies, updateCryptocurrencies, getCryptocurrencies, getCurrencyById, getTopGainers, getTopLosers };

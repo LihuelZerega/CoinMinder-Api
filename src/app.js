@@ -52,7 +52,7 @@ const app = express();
 
 app.use(helmet());
 app.use(cors({
-  origin: 'http://localhost:3000' || 'https://www.thunderclient.com',
+  origin: 'http://localhost:3000' || 'https://www.thunderclient.com' || 'https://bull-swap-app.vercel.app',
   credentials: true
 }));
 

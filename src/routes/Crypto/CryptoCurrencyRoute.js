@@ -4,7 +4,7 @@ const CryptoController = require('../../controllers/CryptoControllers/CryptoCurr
 const { deleteCryptocurrencies, updateCryptocurrencies } = require('../../controllers/CryptoControllers/CryptoCurrencyController');
 const cron = require('node-cron');
 
-cron.schedule('*/12 * * * *', async () => {
+cron.schedule('0 */6 * * *', async () => {
     try {
         await deleteCryptocurrencies();
         await updateCryptocurrencies();

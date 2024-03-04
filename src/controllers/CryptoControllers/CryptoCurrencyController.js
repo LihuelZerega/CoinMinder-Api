@@ -95,7 +95,6 @@ async function getCurrencyById(req, res) {
     }
 }
 
-
 async function getTopGainers(req, res) {
     try {
         const topGainers = await CryptoCurrencycrypto.findAll({

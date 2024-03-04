@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const BnbChartController = require('../../../controllers/CryptoControllers/CryptoChartsControllers/BnbChartController');
+const cron = require('node-cron');
 
 cron.schedule('30 */6 * * *', async () => {
     try {

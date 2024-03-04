@@ -52,7 +52,7 @@ const app = express();
 
 app.use(helmet());
 app.use(cors({
-  origin: 'https://bull-swap-app.vercel.app',
+  origin: 'https://bull-swap-app.vercel.app' ,
   credentials: true
 }));
 
